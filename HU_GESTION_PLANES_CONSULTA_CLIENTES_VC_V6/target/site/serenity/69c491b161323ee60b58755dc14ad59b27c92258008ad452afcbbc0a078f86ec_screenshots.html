@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="b97e1bc97541e035519a8f74c17a78d57382e4ad874ca40aa6fe41a3b75b03f7.html">The System Must Support Creating And Updating Tariff Plans With Configurable Details Such As Code, Description,</a></span>
+                > <span class="truncate-60"><a
+                    href="69c491b161323ee60b58755dc14ad59b27c92258008ad452afcbbc0a078f86ec.html">Acceso y navegaci&oacute;n al formulario de registro de plan </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 05-08-2025 12:26</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">The System Must Support Creating And Updating Tariff Plans With Configurable Details Such As Code, Description, </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                plan type, included units, fixed charge, and minute rates (LDN, LDI, LE), both as included and additional values.<br />
+Each plan must have a validity period (start and end date) and an “Altamira Homologous Plan” code.<br />
+When modifying a plan, the current validity must be closed (fecha_final), and a new one must be created with updated data (fecha_inicial)<br />
+in the davox.planes_voz_corporativo table.
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="34658a1663fcf042bd7acb3325affbe4e647c8acd84d0228be2f52e1381e61b9.html">10 To 30 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Acceso y navegaci&oacute;n al formulario de registro de plan
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given I am on the Davox Plus login page<br>When I login with valid credentials<br><table class='embedded'><thead><th>user</th><th>password</th></thead><tbody><tr><td>&lt;userDavox&gt;</td><td>&lt;passwordDavox&gt;</td></tr></tbody></table><br>And I click on the Básicas button and select the Facturación option<br>Then I should be redirected to the facturation page<br>And hago clic en la opción Mantenimiento Plan Voz Corporativa<br>Then I should be redirected to the form to register a plan<br>When I comple the form with codigo plan "&lt;codigoPlan&gt;", descripcion "&lt;desciption&gt;", unidades incluidas "&lt;includedUnits&gt;", cargo fijo "&lt;fixedCharge&gt;", valor minuto ldn incluido "&lt;LDNMinuteRate&gt;", valor minuto ldi incluido "&lt;LDIMinuteRate&gt;", valor minuto le incluido "&lt;LEMinuteRate&gt;", valor minuto ldn adicional "&lt;additionalLdnMinuteValue&gt;", valor minuto ldi adicional "&lt;additionalLdiMinuteValue&gt;", valor minuto le adicional "&lt;AdditionalLeMinuteValue&gt;", plan homologo altamira "&lt;altamiraHomologousPlan&gt;", bono altamira "&lt;altamiraBond&gt;" and click on agregar button<br>Then I can see the message "&lt;successMessage&gt;" and click on the aceptar button<br>Given I go to the search option<br>When I search for the plan code "&lt;codigoPlan&gt;" and click the Buscar button<br>And I click on the found plan ID<br>Then the plan information should be loaded in the form<br>When I update the included units to "&lt;nuevasUnidadesIncluidas&gt;"  and I click the Guardar button without changing the start date<br>Then I should see an error message "&lt;errorMsaje1&gt;"<br>When I update the start date<br>Then I should see a success message "&lt;successMessage&gt;"<br>Then I connect to the database and verify the updated plan using the query "&lt;queryPlanVosCorporativa&gt;" and check the values for codigo plan "&lt;codigoPlan&gt;", description "&lt;desciption&gt;", included units "&lt;includedUnits&gt;", fixed charge "&lt;fixedCharge&gt;", included minute rates "&lt;LDNMinuteRate&gt;", "&lt;LDIMinuteRate&gt;", "&lt;LEMinuteRate&gt;", and additional rates "&lt;additionalLdnMinuteValue&gt;", "&lt;additionalLdiMinuteValue&gt;", "&lt;AdditionalLeMinuteValue&gt;", homologous plan "&lt;altamiraHomologousPlan&gt;", and bond "&lt;altamiraBond&gt;"<br>Then I connect to the database and verify the Altamira bond using the query "&lt;QueryHomologacionPlanes&gt;", expecting plan code "&lt;altamiraHomologousPlan&gt;" and bond "&lt;altamiraBond&gt;"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="373395f42ab6421f31109605c7c47ba3c91e613147ab7f77b26cd8e0cb557c5e.png" title=" 1: Acceso y navegaci&oacute;n al formulario de registro de plan ({userDavox=DavoxUser, passwordDavox=123456, codigoPlan=5013, desciption=Prueba, includedUnits=3000000, fixedCharge=52, LDNMinuteRate=52, LDIMinuteRate=172, LEMinuteRate=172, additionalLdnMinuteValue=52, additionalLdiMinuteValue=52, AdditionalLeMinuteValue=52, altamiraHomologousPlan=G5, altamiraBond=BDMG, successMessage=Se ha ingresado correctamente el registro, nuevasUnidadesIncluidas=4000000, errorMsaje1=Error en actualizaci&oacute;n, queryPlanVosCorporativa=SELECT * FROM DAVOX.planes_voz_corporativa WHERE COD_PLAN = '5012', QueryHomologacionPlanes=SELECT * FROM DAVOX.homologacion_planes WHERE COD_PLAN = '241'})" width="0"/>
+                <img src="373395f42ab6421f31109605c7c47ba3c91e613147ab7f77b26cd8e0cb557c5e.png" title=" Given I am on the Davox Plus login page" width="0"/>
+                <img src="373395f42ab6421f31109605c7c47ba3c91e613147ab7f77b26cd8e0cb557c5e.png" title=" DavoxUser opens the browser at http://10.203.221.252/login" width="0"/>
+                <img src="373395f42ab6421f31109605c7c47ba3c91e613147ab7f77b26cd8e0cb557c5e.png" title=" Given I am on the Davox Plus login page (completed)" width="0"/>
+                <img src="373395f42ab6421f31109605c7c47ba3c91e613147ab7f77b26cd8e0cb557c5e.png" title=" When I login with valid credentials
+| user | password |
+| DavoxUser | 123456 |" width="0"/>
+                <img src="373395f42ab6421f31109605c7c47ba3c91e613147ab7f77b26cd8e0cb557c5e.png" title=" Davoxuser login page task" width="0"/>
+                <img src="373395f42ab6421f31109605c7c47ba3c91e613147ab7f77b26cd8e0cb557c5e.png" title=" DavoxUser enters 'rhiguitaqu' into enter the user name" width="0"/>
+                <img src="6d869c607205776f5b1afb222a90b6f246eb593e4a3626049e21dd464a5384a5.png" title=" DavoxUser enters 'rhiguitaqu' into enter the user name (completed)" width="0"/>
+                <img src="6d869c607205776f5b1afb222a90b6f246eb593e4a3626049e21dd464a5384a5.png" title=" DavoxUser enters 'SqaTel*123456*' into enter the password" width="0"/>
+                <img src="8c24bd7f14d449cb7ea37f07beb2b084424fdd5c6c1fd15da534e911bdb489cb.png" title=" DavoxUser enters 'SqaTel*123456*' into enter the password (completed)" width="0"/>
+                <img src="8c24bd7f14d449cb7ea37f07beb2b084424fdd5c6c1fd15da534e911bdb489cb.png" title=" DavoxUser clicks on Click on accept button" width="0"/>
+                <img src="fbc155414080e19fd7ab3b05a1d784f7c176cb959a1017361a4a6ff55d5d593a.png" title=" DavoxUser clicks on Click on accept button (completed)" width="0"/>
+                <img src="fbc155414080e19fd7ab3b05a1d784f7c176cb959a1017361a4a6ff55d5d593a.png" title=" Davoxuser login page task (completed)" width="0"/>
+                <img src="fbc155414080e19fd7ab3b05a1d784f7c176cb959a1017361a4a6ff55d5d593a.png" title=" When I login with valid credentials
+| user | password |
+| DavoxUser | 123456 | (completed)" width="0"/>
+                <img src="fbc155414080e19fd7ab3b05a1d784f7c176cb959a1017361a4a6ff55d5d593a.png" title=" And I click on the B&aacute;sicas button and select the Facturaci&oacute;n option" width="0"/>
+                <img src="fd80f2a31fe0b1d5e72ce78d6cafd8bff31d589f1e05f59ce12176dbf06b7766.png" title=" Davoxuser to billing task" width="0"/>
+                <img src="fd80f2a31fe0b1d5e72ce78d6cafd8bff31d589f1e05f59ce12176dbf06b7766.png" title=" DavoxUser clicks on click on the basics menu" width="0"/>
+                <img src="d758cd953cacc0e8a196063535a670b61339f4c526a01bdcc4a41a1ce74492b7.png" title=" DavoxUser clicks on click on the basics menu (completed)" width="0"/>
+                <img src="d758cd953cacc0e8a196063535a670b61339f4c526a01bdcc4a41a1ce74492b7.png" title=" DavoxUser clicks on Click on billing option" width="0"/>
+                <img src="2598a442f7fdb63fcd4e4bd7f2b2ed3c98efd52bf7184f45761f724b7cc50790.png" title=" DavoxUser clicks on Click on billing option (completed)" width="0"/>
+                <img src="2598a442f7fdb63fcd4e4bd7f2b2ed3c98efd52bf7184f45761f724b7cc50790.png" title=" Davoxuser to billing task (completed)" width="0"/>
+                <img src="2598a442f7fdb63fcd4e4bd7f2b2ed3c98efd52bf7184f45761f724b7cc50790.png" title=" And I click on the B&aacute;sicas button and select the Facturaci&oacute;n option (completed)" width="0"/>
+                <img src="2598a442f7fdb63fcd4e4bd7f2b2ed3c98efd52bf7184f45761f724b7cc50790.png" title=" Then I should be redirected to the facturation page" width="0"/>
+                <img src="bfda4cb5d11c9424f808036760809f79f1d382eb80918ba557cb46b58b160e6c.png" title=" Then Facturaci&amp;oacute;n should be an element that is visible" width="0"/>
+                <img src="bfda4cb5d11c9424f808036760809f79f1d382eb80918ba557cb46b58b160e6c.png" title=" Then I should be redirected to the facturation page (completed)" width="0"/>
+                <img src="bfda4cb5d11c9424f808036760809f79f1d382eb80918ba557cb46b58b160e6c.png" title=" And hago clic en la opci&oacute;n Mantenimiento Plan Voz Corporativa" width="0"/>
+                <img src="bfda4cb5d11c9424f808036760809f79f1d382eb80918ba557cb46b58b160e6c.png" title=" Davoxuser billing task" width="0"/>
+                <img src="bfda4cb5d11c9424f808036760809f79f1d382eb80918ba557cb46b58b160e6c.png" title=" DavoxUser clicks on Click on the maintenance vox" width="0"/>
+                <img src="f11a25dc58b05ebaa02cd454698db632b6f398d2658f1d9bac8b5d6bb9d6fce8.png" title=" DavoxUser clicks on Click on the maintenance vox (completed)" width="0"/>
+                <img src="f11a25dc58b05ebaa02cd454698db632b6f398d2658f1d9bac8b5d6bb9d6fce8.png" title=" Davoxuser billing task (completed)" width="0"/>
+                <img src="1de123690e8f25429a95f0028a7dbcf9c3897e1462b3308662f1792906d424bb.png" title=" And hago clic en la opci&oacute;n Mantenimiento Plan Voz Corporativa (completed)" width="0"/>
+                <img src="1de123690e8f25429a95f0028a7dbcf9c3897e1462b3308662f1792906d424bb.png" title=" Then I should be redirected to the form to register a plan" width="0"/>
+                <img src="1de123690e8f25429a95f0028a7dbcf9c3897e1462b3308662f1792906d424bb.png" title=" Then Mantenimiento Planes Voz Corporativa should be an element that is visible" width="0"/>
+                <img src="4052598d33a2f8fea37286ca76fc65a1c6110eb01f8c4d6b0fe2c186bff84385.png" title=" Then Mantenimiento Planes Voz Corporativa should be an element that is visible (completed)" width="0"/>
+                <img src="4052598d33a2f8fea37286ca76fc65a1c6110eb01f8c4d6b0fe2c186bff84385.png" title=" Then I should be redirected to the form to register a plan (completed)" width="0"/>
+                <img src="4052598d33a2f8fea37286ca76fc65a1c6110eb01f8c4d6b0fe2c186bff84385.png" title=" When I comple the form with codigo plan &quot;5013&quot;, descripcion &quot;Prueba&quot;, unidades incluidas &quot;3000000&quot;, cargo fijo &quot;52&quot;, valor minuto ldn incluido &quot;52&quot;, valor minuto ldi incluido &quot;172&quot;, valor minuto le incluido &quot;172&quot;, valor minuto ldn adicional &quot;52&quot;, valor minuto ldi adicional &quot;52&quot;, valor minuto le adicional &quot;52&quot;, plan homologo altamira &quot;G5&quot;, bono altamira &quot;BDMG&quot; and click on agregar button" width="0"/>
+                <img src="4052598d33a2f8fea37286ca76fc65a1c6110eb01f8c4d6b0fe2c186bff84385.png" title=" Davoxuser corporate voice maintenance plans task" width="0"/>
+                <img src="4052598d33a2f8fea37286ca76fc65a1c6110eb01f8c4d6b0fe2c186bff84385.png" title=" DavoxUser enters '5013' into insert the plan code" width="0"/>
+                <img src="5d0fef83e7c64f43c5d6ada27a96bdeadbc7aab9e9850942611adbc1126fc2b1.png" title=" DavoxUser enters '5013' into insert the plan code (completed)" width="0"/>
+                <img src="5d0fef83e7c64f43c5d6ada27a96bdeadbc7aab9e9850942611adbc1126fc2b1.png" title=" DavoxUser enters 'Prueba' into insert the description" width="0"/>
+                <img src="0c75c531c479a17fce92629ee82cc45a65c997d3c2b39810b521a994655d3d72.png" title=" DavoxUser enters 'Prueba' into insert the description (completed)" width="0"/>
+                <img src="0c75c531c479a17fce92629ee82cc45a65c997d3c2b39810b521a994655d3d72.png" title=" DavoxUser clicks on Open menu type of plan" width="0"/>
+                <img src="5ef20644f439c8f79ec522a2041d4ea6b08799356bb9c831b555800a06595f7b.png" title=" DavoxUser clicks on Open menu type of plan (completed)" width="0"/>
+                <img src="5ef20644f439c8f79ec522a2041d4ea6b08799356bb9c831b555800a06595f7b.png" title=" DavoxUser clicks on click on money option " width="0"/>
+                <img src="ace8f2996c76ac4e2e32e5f096f88723c5a913d431104a662fa715014f65db1e.png" title=" DavoxUser clicks on click on money option  (completed)" width="0"/>
+                <img src="ace8f2996c76ac4e2e32e5f096f88723c5a913d431104a662fa715014f65db1e.png" title=" DavoxUser enters '3000000' into insert the unit" width="0"/>
+                <img src="dffc29f1cda3d273c1c471a310db86c17098736cc472ffa561689abcdb1fe7ce.png" title=" DavoxUser enters '3000000' into insert the unit (completed)" width="0"/>
+                <img src="dffc29f1cda3d273c1c471a310db86c17098736cc472ffa561689abcdb1fe7ce.png" title=" DavoxUser enters '52' into insert the Cargo Fijo" width="0"/>
+                <img src="ebd9117776a70ba8cef236a1bcebcfdade6442ec8d5d6b3dc62fe7f6889125cb.png" title=" DavoxUser enters '52' into insert the Cargo Fijo (completed)" width="0"/>
+                <img src="ebd9117776a70ba8cef236a1bcebcfdade6442ec8d5d6b3dc62fe7f6889125cb.png" title=" DavoxUser enters '52' into insert the description" width="0"/>
+                <img src="23c7bea9185fc57417da159e48eac59d367c237b939e99d9bd2189f99dac7eb6.png" title=" DavoxUser enters '52' into insert the description (completed)" width="0"/>
+                <img src="23c7bea9185fc57417da159e48eac59d367c237b939e99d9bd2189f99dac7eb6.png" title=" DavoxUser enters '172' into insert the description" width="0"/>
+                <img src="a57a25b91c6ed42d6dc3a584d66bcb247bb43729da8bcd5e6b5f18d06155c238.png" title=" DavoxUser enters '172' into insert the description (completed)" width="0"/>
+                <img src="a57a25b91c6ed42d6dc3a584d66bcb247bb43729da8bcd5e6b5f18d06155c238.png" title=" DavoxUser enters '172' into insert the description" width="0"/>
+                <img src="1aa492dfa2c6c6e17d4501bfa251e59d2fccf82add855dee22b7f4ed7c54fafb.png" title=" DavoxUser enters '172' into insert the description (completed)" width="0"/>
+                <img src="1aa492dfa2c6c6e17d4501bfa251e59d2fccf82add855dee22b7f4ed7c54fafb.png" title=" DavoxUser enters '52' into insert the description" width="0"/>
+                <img src="2655de5d80ae12ffe877411ffa4c04fd65d12a57f59110feaec811659ba130ba.png" title=" DavoxUser enters '52' into insert the description (completed)" width="0"/>
+                <img src="2655de5d80ae12ffe877411ffa4c04fd65d12a57f59110feaec811659ba130ba.png" title=" DavoxUser enters '52' into insert the description" width="0"/>
+                <img src="12e79fe3c3f0325223f516f4855f0bbb0b3953f2d5d4aa9a8ed5a83ba94474cf.png" title=" DavoxUser enters '52' into insert the description (completed)" width="0"/>
+                <img src="12e79fe3c3f0325223f516f4855f0bbb0b3953f2d5d4aa9a8ed5a83ba94474cf.png" title=" DavoxUser enters '52' into insert the description" width="0"/>
+                <img src="41db20af46b28ca4f3cd5acc1c141776dc79dd779ce2db267b51ac1bd51c14c8.png" title=" DavoxUser enters '52' into insert the description (completed)" width="0"/>
+                <img src="41db20af46b28ca4f3cd5acc1c141776dc79dd779ce2db267b51ac1bd51c14c8.png" title=" DavoxUser enters 'G5' into insert the description" width="0"/>
+                <img src="e09aea8ea14acda3f88b8776277d392b8daaf61ddba219223452e38378561931.png" title=" DavoxUser enters 'G5' into insert the description (completed)" width="0"/>
+                <img src="e09aea8ea14acda3f88b8776277d392b8daaf61ddba219223452e38378561931.png" title=" DavoxUser enters 'BDMG' into insert the description" width="0"/>
+                <img src="6a1fb5b5ec214b45d17d90bff513c5d058babd7d065f62e0a61d5c0f053ab1f8.png" title=" DavoxUser enters 'BDMG' into insert the description (completed)" width="0"/>
+                <img src="6a1fb5b5ec214b45d17d90bff513c5d058babd7d065f62e0a61d5c0f053ab1f8.png" title=" DavoxUser clicks on Click on add plan" width="0"/>
+                <img src="030eaf5ed4986aeb189dbb75d57e98a5d8e061ee2bd9f31976e15dc9816ec6f2.png" title=" DavoxUser clicks on Click on add plan (completed)" width="0"/>
+                <img src="030eaf5ed4986aeb189dbb75d57e98a5d8e061ee2bd9f31976e15dc9816ec6f2.png" title=" Davoxuser corporate voice maintenance plans task (completed)" width="0"/>
+                <img src="030eaf5ed4986aeb189dbb75d57e98a5d8e061ee2bd9f31976e15dc9816ec6f2.png" title=" When I comple the form with codigo plan &quot;5013&quot;, descripcion &quot;Prueba&quot;, unidades incluidas &quot;3000000&quot;, cargo fijo &quot;52&quot;, valor minuto ldn incluido &quot;52&quot;, valor minuto ldi incluido &quot;172&quot;, valor minuto le incluido &quot;172&quot;, valor minuto ldn adicional &quot;52&quot;, valor minuto ldi adicional &quot;52&quot;, valor minuto le adicional &quot;52&quot;, plan homologo altamira &quot;G5&quot;, bono altamira &quot;BDMG&quot; and click on agregar button (completed)" width="0"/>
+                <img src="030eaf5ed4986aeb189dbb75d57e98a5d8e061ee2bd9f31976e15dc9816ec6f2.png" title=" Then I can see the message &quot;Se ha ingresado correctamente el registro&quot; and click on the aceptar button" width="0"/>
+                <img src="06afc90120391abf68264633ff915b168fdd9088fe3f2d5bf82e84fa02b492f8.png" title=" Then el mensaje de env&amp;iacute;o exitoso should be 'Se ha ingresado correctamente el registro'" width="0"/>
+                <img src="c2ccc8a0e261b46f3422aab7b3ff98088cf683a40500c14984be8eec5160def0.png" title=" Then el mensaje de env&amp;iacute;o exitoso should be 'Se ha ingresado correctamente el registro' (completed)" width="0"/>
+                <img src="c2ccc8a0e261b46f3422aab7b3ff98088cf683a40500c14984be8eec5160def0.png" title=" DavoxUser clicks on click con accept button" width="0"/>
+                <img src="b8467ffbd15637a7f19ab0a2ed81c7cd0543184bcb3b50c1633f4d51656d7658.png" title=" DavoxUser clicks on click con accept button (completed)" width="0"/>
+                <img src="b8467ffbd15637a7f19ab0a2ed81c7cd0543184bcb3b50c1633f4d51656d7658.png" title=" Then I can see the message &quot;Se ha ingresado correctamente el registro&quot; and click on the aceptar button (completed)" width="0"/>
+                <img src="b8467ffbd15637a7f19ab0a2ed81c7cd0543184bcb3b50c1633f4d51656d7658.png" title=" Given I go to the search option" width="0"/>
+                <img src="3426ff15e511d93bd6d4435cbb165978e58c26f9f2a8e0e3893b7ad776dbcb88.png" title=" Davoxuser go to search task" width="0"/>
+                <img src="3426ff15e511d93bd6d4435cbb165978e58c26f9f2a8e0e3893b7ad776dbcb88.png" title=" DavoxUser clicks on click on search button" width="0"/>
+                <img src="b721406e31175d868aa891861274953a1a66ba85eaad0d28b481fefb8b5d5a88.png" title=" DavoxUser clicks on click on search button (completed)" width="0"/>
+                <img src="b721406e31175d868aa891861274953a1a66ba85eaad0d28b481fefb8b5d5a88.png" title=" Davoxuser go to search task (completed)" width="0"/>
+                <img src="b721406e31175d868aa891861274953a1a66ba85eaad0d28b481fefb8b5d5a88.png" title=" Given I go to the search option (completed)" width="0"/>
+                <img src="b721406e31175d868aa891861274953a1a66ba85eaad0d28b481fefb8b5d5a88.png" title=" When I search for the plan code &quot;5013&quot; and click the Buscar button" width="0"/>
+                <img src="e7986c9da24e1b4c83634f0dbee51ee288768d06a84a996270bb709e53548ae1.png" title=" Davoxuser search plan task" width="0"/>
+                <img src="e7986c9da24e1b4c83634f0dbee51ee288768d06a84a996270bb709e53548ae1.png" title=" DavoxUser enters '5013' into insert the plan code" width="0"/>
+                <img src="05426b045d32fcea849a8dd84c5f958fdcd7f68b0f456a95b23d91a3fd8c7a23.png" title=" DavoxUser enters '5013' into insert the plan code (completed)" width="0"/>
+                <img src="05426b045d32fcea849a8dd84c5f958fdcd7f68b0f456a95b23d91a3fd8c7a23.png" title=" DavoxUser clicks on Click on add plan" width="0"/>
+                <img src="54deb70a8e62db5768388734e148cf781c4a9dcd78692da6479591b1605b7b73.png" title=" DavoxUser clicks on Click on add plan (completed)" width="0"/>
+                <img src="54deb70a8e62db5768388734e148cf781c4a9dcd78692da6479591b1605b7b73.png" title=" Davoxuser search plan task (completed)" width="0"/>
+                <img src="54deb70a8e62db5768388734e148cf781c4a9dcd78692da6479591b1605b7b73.png" title=" When I search for the plan code &quot;5013&quot; and click the Buscar button (completed)" width="0"/>
+                <img src="54deb70a8e62db5768388734e148cf781c4a9dcd78692da6479591b1605b7b73.png" title=" And I click on the found plan ID" width="0"/>
+                <img src="9157b1e340196f606fe35984c22998564c93f3cfa6fd86382b24bc25cb880eb4.png" title=" Davoxuser fill out form to updated" width="0"/>
+                <img src="9157b1e340196f606fe35984c22998564c93f3cfa6fd86382b24bc25cb880eb4.png" title=" DavoxUser clicks on click on search id" width="0"/>
+                <img src="1c0e744814291d5f45e88fb9426b971228b83354a63014447b5cf0d6c3766f0e.png" title=" DavoxUser clicks on click on search id (completed)" width="0"/>
+                <img src="1c0e744814291d5f45e88fb9426b971228b83354a63014447b5cf0d6c3766f0e.png" title=" Davoxuser fill out form to updated (completed)" width="0"/>
+                <img src="1c0e744814291d5f45e88fb9426b971228b83354a63014447b5cf0d6c3766f0e.png" title=" And I click on the found plan ID (completed)" width="0"/>
+                <img src="1c0e744814291d5f45e88fb9426b971228b83354a63014447b5cf0d6c3766f0e.png" title=" Then the plan information should be loaded in the form" width="0"/>
+                <img src="1c0e744814291d5f45e88fb9426b971228b83354a63014447b5cf0d6c3766f0e.png" title=" When I update the included units to &quot;4000000&quot;  and I click the Guardar button without changing the start date" width="0"/>
+                <img src="1c0e744814291d5f45e88fb9426b971228b83354a63014447b5cf0d6c3766f0e.png" title=" Davoxuser update plan with error task" width="0"/>
+                <img src="715bd52938d13a384023ec7686bde76968ad676e3c4e1768e5ee304d2fce5649.png" title=" DavoxUser clears field insert the unit" width="0"/>
+                <img src="fa7addef48e6ddf59ba92aac43cfe7c1d2cad80d307e14074256df6eb0e798b4.png" title=" DavoxUser clears field insert the unit (completed)" width="0"/>
+                <img src="fa7addef48e6ddf59ba92aac43cfe7c1d2cad80d307e14074256df6eb0e798b4.png" title=" DavoxUser enters '4000000' into insert the unit" width="0"/>
+                <img src="bac8948c94329ebbdd810fbb8b0f80e00d8f804485c23ff7a54f3075648411b0.png" title=" DavoxUser enters '4000000' into insert the unit (completed)" width="0"/>
+                <img src="bac8948c94329ebbdd810fbb8b0f80e00d8f804485c23ff7a54f3075648411b0.png" title=" DavoxUser clicks on Click on add plan" width="0"/>
+                <img src="d405489b632e4ad33c39b08223962b8d989374ee321b5ba937625e953b3a40ac.png" title=" DavoxUser clicks on Click on add plan (completed)" width="0"/>
+                <img src="d405489b632e4ad33c39b08223962b8d989374ee321b5ba937625e953b3a40ac.png" title=" Davoxuser update plan with error task (completed)" width="0"/>
+                <img src="d405489b632e4ad33c39b08223962b8d989374ee321b5ba937625e953b3a40ac.png" title=" When I update the included units to &quot;4000000&quot;  and I click the Guardar button without changing the start date (completed)" width="0"/>
+                <img src="d405489b632e4ad33c39b08223962b8d989374ee321b5ba937625e953b3a40ac.png" title=" Then I should see an error message &quot;Error en actualizaci&oacute;n&quot;" width="0"/>
+                <img src="a991f89668a4bcbdffb8db77479c44f15e3419447e3e65dc3fad79b12d314ed0.png" title=" Then Message error: should be 'Error en actualizaci&amp;oacute;n'" width="0"/>
+                <img src="781899fac20911b1e75e999b0426cdf1b3c1eb556216974500b98c4cb2c24121.png" title=" Then Message error: should be 'Error en actualizaci&amp;oacute;n' (completed)" width="0"/>
+                <img src="781899fac20911b1e75e999b0426cdf1b3c1eb556216974500b98c4cb2c24121.png" title=" Then I should see an error message &quot;Error en actualizaci&oacute;n&quot; (completed)" width="0"/>
+                <img src="781899fac20911b1e75e999b0426cdf1b3c1eb556216974500b98c4cb2c24121.png" title=" When I update the start date" width="0"/>
+                <img src="781899fac20911b1e75e999b0426cdf1b3c1eb556216974500b98c4cb2c24121.png" title=" Davoxuser updated date task" width="0"/>
+                <img src="91348069ad8ad7caaff57646f7320dad42766eb3f2129043c807a2184dea1761.png" title=" DavoxUser clicks on click on save changed" width="0"/>
+                <img src="e145a3ba3411929650f3e4383a6ef77baf263faa914f9664014b2e4f3adf6eda.png" title=" DavoxUser clicks on click on save changed (completed)" width="0"/>
+                <img src="e145a3ba3411929650f3e4383a6ef77baf263faa914f9664014b2e4f3adf6eda.png" title=" DavoxUser clicks on Click to open calendar" width="0"/>
+                <img src="0b3b71d8134c96307436442f93fda9c1a6de59d2d33c994df81f6ed0b15ea83a.png" title=" DavoxUser clicks on Click to open calendar (completed)" width="0"/>
+                <img src="0b3b71d8134c96307436442f93fda9c1a6de59d2d33c994df81f6ed0b15ea83a.png" title=" DavoxUser clicks on click on next month" width="0"/>
+                <img src="5b672f3dc2a129802443717487fe0bee50fba699ea8c74ed3506177bc89f1edf.png" title=" DavoxUser clicks on click on next month (completed)" width="0"/>
+                <img src="5b672f3dc2a129802443717487fe0bee50fba699ea8c74ed3506177bc89f1edf.png" title=" DavoxUser clicks on set other day in the calendar" width="0"/>
+                <img src="ba5b963bb8df6b47ad3c1f186be551fc6bbf299abaf298c6068692bd542b14f3.png" title=" DavoxUser clicks on set other day in the calendar (completed)" width="0"/>
+                <img src="ba5b963bb8df6b47ad3c1f186be551fc6bbf299abaf298c6068692bd542b14f3.png" title=" DavoxUser clicks on Click on add plan" width="0"/>
+                <img src="573a685854f52daecfd294708a36db17ebc633a73ed0efd7927c0fb842d9bddf.png" title=" DavoxUser clicks on Click on add plan (completed)" width="0"/>
+                <img src="573a685854f52daecfd294708a36db17ebc633a73ed0efd7927c0fb842d9bddf.png" title=" Davoxuser updated date task (completed)" width="0"/>
+                <img src="573a685854f52daecfd294708a36db17ebc633a73ed0efd7927c0fb842d9bddf.png" title=" When I update the start date (completed)" width="0"/>
+                <img src="573a685854f52daecfd294708a36db17ebc633a73ed0efd7927c0fb842d9bddf.png" title=" Then I should see a success message &quot;Se ha ingresado correctamente el registro&quot;" width="0"/>
+                <img src="a26a28817dd8dd2186ce886620420f3d3b397ba7dcdb2fb05c8d51270a4c4224.png" title=" Then Message de registro exitoso: should be 'Se ha ingresado correctamente el registro'" width="0"/>
+                <img src="9149663d5cacbf2c3d73c6a95c8b8bb686eada6a3ccddba8bb7aeeec05e30da1.png" title=" Then Message de registro exitoso: should be 'Se ha ingresado correctamente el registro' (completed)" width="0"/>
+                <img src="9149663d5cacbf2c3d73c6a95c8b8bb686eada6a3ccddba8bb7aeeec05e30da1.png" title=" Then I should see a success message &quot;Se ha ingresado correctamente el registro&quot; (completed)" width="0"/>
+                <img src="9149663d5cacbf2c3d73c6a95c8b8bb686eada6a3ccddba8bb7aeeec05e30da1.png" title=" Then I connect to the database and verify the updated plan using the query &quot;SELECT * FROM DAVOX.planes_voz_corporativa WHERE COD_PLAN = '5012'&quot; and check the values for codigo plan &quot;5013&quot;, description &quot;Prueba&quot;, included units &quot;3000000&quot;, fixed charge &quot;52&quot;, included minute rates &quot;52&quot;, &quot;172&quot;, &quot;172&quot;, and additional rates &quot;52&quot;, &quot;52&quot;, &quot;52&quot;, homologous plan &quot;G5&quot;, and bond &quot;BDMG&quot;" width="0"/>
+                <img src="9149663d5cacbf2c3d73c6a95c8b8bb686eada6a3ccddba8bb7aeeec05e30da1.png" title=" Then validar datos plan voz" width="0"/>
+                <img src="c4a98cb97f3ad7f7f54bd907b99cfffb160c1bb96d8c54b61725174e4e7a9454.png" title=" Then validar datos plan voz (completed)" width="0"/>
+                <img src="c4a98cb97f3ad7f7f54bd907b99cfffb160c1bb96d8c54b61725174e4e7a9454.png" title=" Then I connect to the database and verify the updated plan using the query &quot;SELECT * FROM DAVOX.planes_voz_corporativa WHERE COD_PLAN = '5012'&quot; and check the values for codigo plan &quot;5013&quot;, description &quot;Prueba&quot;, included units &quot;3000000&quot;, fixed charge &quot;52&quot;, included minute rates &quot;52&quot;, &quot;172&quot;, &quot;172&quot;, and additional rates &quot;52&quot;, &quot;52&quot;, &quot;52&quot;, homologous plan &quot;G5&quot;, and bond &quot;BDMG&quot; (completed)" width="0"/>
+                <img src="c4a98cb97f3ad7f7f54bd907b99cfffb160c1bb96d8c54b61725174e4e7a9454.png" title=" Then I connect to the database and verify the Altamira bond using the query &quot;SELECT * FROM DAVOX.homologacion_planes WHERE COD_PLAN = '241'&quot;, expecting plan code &quot;G5&quot; and bond &quot;BDMG&quot;" width="0"/>
+
+                <img src="c4a98cb97f3ad7f7f54bd907b99cfffb160c1bb96d8c54b61725174e4e7a9454.png" title=" 1: Acceso y navegación al formulario de registro de plan ({userDavox=DavoxUser, passwordDavox=123456, codigoPlan=5013, desciption=Prueba, includedUnits=3000000, fixedCharge=52, LDNMinuteRate=52, LDIMinuteRate=172, LEMinuteRate=172, additionalLdnMinuteValue=52, additionalLdiMinuteValue=52, AdditionalLeMinuteValue=52, altamiraHomologousPlan=G5, altamiraBond=BDMG, successMessage=Se ha ingresado correctamente el registro, nuevasUnidadesIncluidas=4000000, errorMsaje1=Error en actualización, queryPlanVosCorporativa=SELECT * FROM DAVOX.planes_voz_corporativa WHERE COD_PLAN = '5012', QueryHomologacionPlanes=SELECT * FROM DAVOX.homologacion_planes WHERE COD_PLAN = '241'}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.46</span>
+</div>
+</body>
+</html>

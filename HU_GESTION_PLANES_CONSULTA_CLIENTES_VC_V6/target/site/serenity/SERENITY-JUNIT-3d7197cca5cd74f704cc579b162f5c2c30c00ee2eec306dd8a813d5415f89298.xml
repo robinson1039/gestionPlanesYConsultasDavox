@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="The system must support creating and updating Tariff Plans with configurable details such as code, description," skipped="0" tests="1" time="0.85" timestamp="2025-07-22 02:30:33"><testcase name="Acceso y navegación al formulario de registro de plan"><failure message="Expected validar datos plan voz&#13;&#10;Expected: is &lt;true&gt;&#13;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">Expected validar datos plan voz&#13;
+Expected: is &lt;true&gt;&#13;
+     but: was &lt;false&gt;</failure><system-err>Expected validar datos plan voz&#13;
+Expected: is &lt;true&gt;&#13;
+     but: was &lt;false&gt;&#13;
+com.davox.stepDefinitions.GestionPlanesConsultasClientesVcV6.i_connect_to_the_database_and_verify_the_updated_plan_using_the_query_and_check_the_values_for_codigo_plan_description_included_units_fixed_charge_included_minute_rates_and_additional_rates_homologous_plan_and_bond(GestionPlanesConsultasClientesVcV6.java:190)&#13;
+✽.I connect to the database and verify the updated plan using the query "SELECT * FROM DAVOX.planes_voz_corporativa WHERE COD_PLAN = '5002'" and check the values for codigo plan "5009", description "Prueba", included units "4000000", fixed charge "52", included minute rates "52", "172", "172", and additional rates "52", "52", "52", homologous plan "A1", and bond "ABC1"(file:///C:/Users/Robinson/Documents/Telefonica/Davox/Gestion%20planes%20y%20consultas/HU_GESTION_PLANES_CONSULTA_CLIENTES_VC_V6/src/test/resources/features/gestionPlanesConsultaClientesVcV6.feature:33)&#13;
+</system-err></testcase></testsuite>

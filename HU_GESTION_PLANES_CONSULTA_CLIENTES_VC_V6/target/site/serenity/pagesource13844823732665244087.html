@@ -1,0 +1,818 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html lang="es"&gt;<br/>
+ &lt;head&gt; <br/>
+  &lt;meta charset="utf-8"&gt; <br/>
+  &lt;title&gt;Davox Plus&lt;/title&gt; <br/>
+  &lt;base href="./"&gt; <br/>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt; <br/>
+  &lt;link rel="icon" type="image/x-icon" href="favicon.ico"&gt; <br/>
+  &lt;link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet"&gt; <br/>
+  &lt;link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"&gt; <br/>
+  &lt;link rel="stylesheet" href="styles.a59ccaf71749887490c9.css"&gt;<br/>
+  &lt;style&gt;app-menu[_ngcontent-nct-c0]{width:100%;max-width:1920px;height:250px;position:-webkit-sticky;position:sticky;top:0;z-index:900}.contenedor[_ngcontent-nct-c0]{width:auto;height:2.5rem;top:250px;right:.5rem;position:fixed;-webkit-box-align:center;align-items:center;z-index:1}&lt;/style&gt;<br/>
+  &lt;style&gt;.contenedor[_ngcontent-nct-c3]{height:100vh;width:100%}.imgcurva[_ngcontent-nct-c3]{background-image:url(Curva_Login.add38942be5dc6e1d791.svg);background-repeat:no-repeat;background-size:cover;width:100%;height:100%;position:fixed;top:0;right:0}.mensaje[_ngcontent-nct-c3]{color:red;padding:0 8px;position:relative;bottom:10px}.contenedor[_ngcontent-nct-c3]   .fondo[_ngcontent-nct-c3]{position:absolute;width:60%;height:100%;left:40%;z-index:-1}.contenedor[_ngcontent-nct-c3]   .elementos[_ngcontent-nct-c3]{width:300px;height:500px;position:relative;top:15%;z-index:200}.contenedor[_ngcontent-nct-c3]   .elementos[_ngcontent-nct-c3]   h1[_ngcontent-nct-c3]{font-family:Roboto;font-weight:700;color:#fff;font-size:50px;font-stretch:normal;font-style:normal;line-height:1.16;letter-spacing:normal}.contenedor[_ngcontent-nct-c3]   .elementos[_ngcontent-nct-c3]   p[_ngcontent-nct-c3]{font-family:Roboto;color:#fff;font-size:16px;font-stretch:normal;font-style:normal;line-height:1.16;letter-spacing:normal;margin-bottom:30px}.contenedor[_ngcontent-nct-c3]   .elementos[_ngcontent-nct-c3]   input[_ngcontent-nct-c3]{border-style:none;border-radius:7px;width:300px;height:35px;margin-bottom:15px;padding-left:15px}.contenedor[_ngcontent-nct-c3]   .elementos[_ngcontent-nct-c3]   .invalido[_ngcontent-nct-c3]{border:1px solid red;margin-bottom:0}[_ngcontent-nct-c3]::-webkit-input-placeholder{color:#86888c}[_ngcontent-nct-c3]::-moz-placeholder{color:#86888c}[_ngcontent-nct-c3]::-ms-input-placeholder{color:#86888c}[_ngcontent-nct-c3]::placeholder{color:#86888c}.contenedor[_ngcontent-nct-c3]   .elementos[_ngcontent-nct-c3]   .boton[_ngcontent-nct-c3]{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}.contenedor[_ngcontent-nct-c3]   .elementos[_ngcontent-nct-c3]   .boton[_ngcontent-nct-c3]   button[_ngcontent-nct-c3]{border-style:none;border-radius:16.5px;background-color:#5bc500;padding:5px 25px;color:#fff;margin:10px 0 80px}.contenedor[_ngcontent-nct-c3]   .elementos[_ngcontent-nct-c3]   .boton[_ngcontent-nct-c3]   img[_ngcontent-nct-c3]{position:relative;width:7rem}&lt;/style&gt;<br/>
+  &lt;style&gt;#no-freeze-spinner[_ngcontent-nct-c4]{position:fixed;top:0;left:0;width:100%;-webkit-transition:.1s linear;transition:all .1s linear;opacity:0;height:100vh;-webkit-transform:scale(10);transform:scale(10);z-index:-1;background:#000}.no-freeze-spinner[_ngcontent-nct-c4]   #no-freeze-spinner[_ngcontent-nct-c4]{z-index:9999;opacity:.5;-webkit-transform:scale(1);transform:scale(1)}#no-freeze-spinner[_ngcontent-nct-c4] &gt; div[_ngcontent-nct-c4] &gt; div[_ngcontent-nct-c4]{border:5px solid var(--basic-dark);border-radius:50%;-webkit-animation:1s linear infinite rotate;animation:1s linear infinite rotate;border-left-color:rgba(200,200,200,.4);width:100%;height:100%}#no-freeze-spinner[_ngcontent-nct-c4] &gt; div[_ngcontent-nct-c4]{position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;border-radius:50%;box-shadow:0 0 0 2000px #000;width:200px;height:200px;padding:5px}.no-freeze-spinner[_ngcontent-nct-c4]   #no-freeze-spinner[_ngcontent-nct-c4]   div[_ngcontent-nct-c4]   div[_ngcontent-nct-c4]{-webkit-animation-play-state:running;animation-play-state:running}@-webkit-keyframes loadicons{0%,33%{-webkit-transform:scale(0) translate3d(0,0,0);transform:scale(0) translate3d(0,0,0)}11%{-webkit-transform:scale(1.2) translate3d(0,0,0);transform:scale(1.2) translate3d(0,0,0)}22%{-webkit-transform:scale(1) translate3d(0,0,0);transform:scale(1) translate3d(0,0,0)}}@keyframes loadicons{0%,33%{-webkit-transform:scale(0) translate3d(0,0,0);transform:scale(0) translate3d(0,0,0)}11%{-webkit-transform:scale(1.2) translate3d(0,0,0);transform:scale(1.2) translate3d(0,0,0)}22%{-webkit-transform:scale(1) translate3d(0,0,0);transform:scale(1) translate3d(0,0,0)}}@-webkit-keyframes rotate{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes rotate{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.no-freeze-spinner[_ngcontent-nct-c4]   #no-freeze-spinner[_ngcontent-nct-c4]   img[_ngcontent-nct-c4]{font-size:24px;position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;color:#fff;width:60px;height:60px;line-height:1;-webkit-transform:scale(0) translate3d(0,0,0);transform:scale(0) translate3d(0,0,0)}.no-freeze-spinner[_ngcontent-nct-c4]   #no-freeze-spinner[_ngcontent-nct-c4]   img[_ngcontent-nct-c4]:nth-of-type(1){-webkit-animation:4s ease-in-out infinite loadicons;animation:4s ease-in-out infinite loadicons}.no-freeze-spinner[_ngcontent-nct-c4]   #no-freeze-spinner[_ngcontent-nct-c4]   img[_ngcontent-nct-c4]:nth-of-type(2){-webkit-animation:4s ease-in-out 1s infinite loadicons;animation:4s ease-in-out 1s infinite loadicons}.no-freeze-spinner[_ngcontent-nct-c4]   #no-freeze-spinner[_ngcontent-nct-c4]   img[_ngcontent-nct-c4]:nth-of-type(3){-webkit-animation:4s ease-in-out 2s infinite loadicons;animation:4s ease-in-out 2s infinite loadicons}.no-freeze-spinner[_ngcontent-nct-c4]   #no-freeze-spinner[_ngcontent-nct-c4]   img[_ngcontent-nct-c4]:nth-of-type(4){-webkit-animation:4s ease-in-out 3s infinite loadicons;animation:4s ease-in-out 3s infinite loadicons}&lt;/style&gt;<br/>
+  &lt;style&gt;.fondo[_ngcontent-nct-c5]{background-image:url(imagen-fondo2.9a4063a2a43a9f37cd6b.png);background-repeat:no-repeat;background-size:cover;width:100%;height:calc(100% - 130px);position:fixed;top:150px;right:0}.logo[_ngcontent-nct-c5]{width:300px;height:150px;position:fixed;bottom:0;right:0;background-image:url(logo-telefonica-movistar-home.26c63dcbc68e52876077.svg);background-position:center;background-repeat:no-repeat;background-size:contain;z-index:100}&lt;/style&gt;<br/>
+  &lt;style&gt;.menu[_ngcontent-nct-c1]{width:100%;height:100%;background-image:url(Curva_home.04c052c9807f67260fc9.svg);background-position:center;background-repeat:no-repeat;background-size:cover;z-index:900}#header-menu[_ngcontent-nct-c1]{position:absolute;top:0;right:0;width:100%;height:70px;margin:1rem}#logo-menu[_ngcontent-nct-c1]{position:absolute;bottom:0;left:5%;width:300px;height:80px;background-image:url(logo-davox.bad1a47234ecae352432.png);background-position:center;background-repeat:no-repeat;background-size:contain;cursor:pointer}#info-menu[_ngcontent-nct-c1]{position:absolute;bottom:0;right:5%;width:auto;height:100%;display:-webkit-inline-box;display:inline-flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;align-content:center}#info-usuario[_ngcontent-nct-c1]{position:relative;bottom:0;right:0;width:3rem;height:3rem;border-radius:50%;font-size:1.5rem;text-align:center;border:.08rem solid var(--dark-dark);box-shadow:0 0 9px 0 var(--dark-default);padding:.2rem;cursor:pointer}#perfil[_ngcontent-nct-c1]{position:absolute;margin-top:10px;top:70px;width:150px;height:90px!important;border-radius:15px!important;background-color:var(--primary-default)!important;z-index:1000}.invisible[_ngcontent-nct-c1]{visibility:hidden}#perfil[_ngcontent-nct-c1]   #nombre[_ngcontent-nct-c1]{text-align:center;color:#fff;font-family:Roboto;padding-top:5px;margin:0}#perfil[_ngcontent-nct-c1]   #tipo-perfil[_ngcontent-nct-c1]{text-align:center;color:#fff;font-family:Roboto;font-size:10px;margin:0 0 5px}#perfil[_ngcontent-nct-c1]   #logout[_ngcontent-nct-c1]{width:100%;color:#fff;border-style:none;background-color:var(--primary-default)!important;border-radius:15px!important;padding-bottom:5px}#opciones-menu[_ngcontent-nct-c1]{position:absolute;top:80px;width:100%;height:auto;display:-webkit-inline-box;display:inline-flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;align-content:center}.opcion-menu[_ngcontent-nct-c1]{display:-webkit-inline-box;display:inline-flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;align-content:center;padding:1rem;float:left;color:#fff}.submenu[_ngcontent-nct-c1]{width:100%;height:100%;position:fixed;display:-webkit-box;display:flex;top:0;background:#fff;z-index:500}.lista-opciones[_ngcontent-nct-c1]{position:relative;display:-webkit-box;display:flex;top:250px;width:100%;height:calc(100% - 250px)}.lista-opciones[_ngcontent-nct-c1]   .logo-menu[_ngcontent-nct-c1]{display:-webkit-box;display:flex;-webkit-box-align:end;align-items:flex-end;-webkit-box-pack:end;justify-content:flex-end;position:absolute;right:0!important;bottom:0!important}.lista-opciones[_ngcontent-nct-c1]   .logo-menu[_ngcontent-nct-c1]   .logo-movistar[_ngcontent-nct-c1]{height:17rem}.lista-opciones[_ngcontent-nct-c1]   .logo-menu[_ngcontent-nct-c1]   .logo-movistar[_ngcontent-nct-c1]   img[_ngcontent-nct-c1]{height:100%}.lista-opciones[_ngcontent-nct-c1]   .subtitulo[_ngcontent-nct-c1]{background:var(--primary-default);width:160px;height:50px;margin:10px 0 0 20%;border-radius:15px;box-shadow:0 0 7px gray;display:-webkit-box;display:flex}.lista-opciones[_ngcontent-nct-c1]   .subtitulo[_ngcontent-nct-c1]   img[_ngcontent-nct-c1]{margin:0 0 5px 10px}.lista-opciones[_ngcontent-nct-c1]   .subtitulo[_ngcontent-nct-c1]   p[_ngcontent-nct-c1]{text-align:center;padding:10px 0;color:#fff;font-family:Roboto;margin-left:10px}.lista-opciones[_ngcontent-nct-c1]   .opciones[_ngcontent-nct-c1]{width:500px;height:90%;margin:10px 0 0 20px;overflow:auto;min-width:300px}.opcion-icon[_ngcontent-nct-c1]{width:3.5rem;height:3.5rem;border-radius:50%;background-color:var(--ligth-default);border:.08rem solid var(--dark-dark);box-shadow:0 0 9px 0 var(--dark-default);padding:.2rem}.opcion-icon[_ngcontent-nct-c1]:hover, .seleccionado[_ngcontent-nct-c1], div.opciones-submenu[_ngcontent-nct-c1]{background-color:var(--primary-default)!important}button.opcion-submenu[_ngcontent-nct-c1]{max-width:500px!important;margin:0 auto;color:#fff}button.opcion-submenu[_ngcontent-nct-c1]:focus{outline:0}button.opcion-submenu[_ngcontent-nct-c1]:after{border-style:none}.icono-menu[_ngcontent-nct-c1]{margin:0 5px 5px 0}.mat-list-base[_ngcontent-nct-c1]{margin-left:0;padding:0!important;font-family:Roboto!important}.mat-list-base[_ngcontent-nct-c1]   .mat-list-item[_ngcontent-nct-c1]   .mat-list-item-content[_ngcontent-nct-c1], .mat-list-base[_ngcontent-nct-c1]   .mat-list-option[_ngcontent-nct-c1]   .mat-list-item-content[_ngcontent-nct-c1]{padding:0!important}.mat-list-item[_ngcontent-nct-c1]:hover{cursor:pointer;border-radius:25px;-webkit-animation-name:seleccionado;animation-name:seleccionado;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;overflow:hidden}.mat-list-item[_ngcontent-nct-c1]:focus{outline:0}@-webkit-keyframes seleccionado{100%{background-color:#9acd32}}@keyframes seleccionado{100%{background-color:#9acd32}}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-menu-panel{min-width:112px;max-width:280px;overflow:auto;-webkit-overflow-scrolling:touch;max-height:calc(100vh - 48px);border-radius:4px;outline:0}.mat-menu-panel.ng-animating{pointer-events:none}@media (-ms-high-contrast:active){.mat-menu-panel{outline:solid 1px}}.mat-menu-content:not(:empty){padding-top:8px;padding-bottom:8px}.mat-menu-item{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;line-height:48px;height:48px;padding:0 16px;text-align:left;text-decoration:none;max-width:100%;position:relative}.mat-menu-item::-moz-focus-inner{border:0}.mat-menu-item[disabled]{cursor:default}[dir=rtl] .mat-menu-item{text-align:right}.mat-menu-item .mat-icon{margin-right:16px;vertical-align:middle}.mat-menu-item .mat-icon svg{vertical-align:top}[dir=rtl] .mat-menu-item .mat-icon{margin-left:16px;margin-right:0}@media (-ms-high-contrast:active){.mat-menu-item-highlighted,.mat-menu-item.cdk-keyboard-focused,.mat-menu-item.cdk-program-focused{outline:dotted 1px}}.mat-menu-item-submenu-trigger{padding-right:32px}.mat-menu-item-submenu-trigger::after{width:0;height:0;border-style:solid;border-width:5px 0 5px 5px;border-color:transparent transparent transparent currentColor;content:'';display:inline-block;position:absolute;top:50%;right:16px;transform:translateY(-50%)}[dir=rtl] .mat-menu-item-submenu-trigger{padding-right:16px;padding-left:32px}[dir=rtl] .mat-menu-item-submenu-trigger::after{right:auto;left:16px;transform:rotateY(180deg) translateY(-50%)}button.mat-menu-item{width:100%}.mat-menu-item .mat-menu-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}&lt;/style&gt;<br/>
+  &lt;style&gt;.boton[_ngcontent-nct-c2]{width:100%;height:100%;border-radius:0 0 1rem 1rem;border:none;color:#fff;box-shadow:0 10px 2px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);-webkit-transition:.3s;transition:.3s;font-size:1rem;padding:.5rem;display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center}.boton-procesos[_ngcontent-nct-c2]{background:var(--basic-default)}.boton-alerta[_ngcontent-nct-c2]{background:var(--warn-default)}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-icon{background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px}.mat-icon.mat-icon-inline{font-size:inherit;height:inherit;line-height:inherit;width:inherit}[dir=rtl] .mat-icon-rtl-mirror{transform:scale(-1,1)}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon{display:block}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon{margin:auto}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-subheader{display:flex;box-sizing:border-box;padding:16px;align-items:center}.mat-list-base .mat-subheader{margin:0}.mat-list-base{padding-top:8px;display:block;-webkit-tap-highlight-color:transparent}.mat-list-base .mat-subheader{height:48px;line-height:16px}.mat-list-base .mat-subheader:first-child{margin-top:-8px}.mat-list-base .mat-list-item,.mat-list-base .mat-list-option{display:block;height:48px;-webkit-tap-highlight-color:transparent;width:100%;padding:0}.mat-list-base .mat-list-item .mat-list-item-content,.mat-list-base .mat-list-option .mat-list-item-content{display:flex;flex-direction:row;align-items:center;box-sizing:border-box;padding:0 16px;position:relative;height:inherit}.mat-list-base .mat-list-item .mat-list-item-content-reverse,.mat-list-base .mat-list-option .mat-list-item-content-reverse{display:flex;align-items:center;padding:0 16px;flex-direction:row-reverse;justify-content:space-around}.mat-list-base .mat-list-item .mat-list-item-ripple,.mat-list-base .mat-list-option .mat-list-item-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}.mat-list-base .mat-list-item.mat-list-item-with-avatar,.mat-list-base .mat-list-option.mat-list-item-with-avatar{height:56px}.mat-list-base .mat-list-item.mat-2-line,.mat-list-base .mat-list-option.mat-2-line{height:72px}.mat-list-base .mat-list-item.mat-3-line,.mat-list-base .mat-list-option.mat-3-line{height:88px}.mat-list-base .mat-list-item.mat-multi-line,.mat-list-base .mat-list-option.mat-multi-line{height:auto}.mat-list-base .mat-list-item.mat-multi-line .mat-list-item-content,.mat-list-base .mat-list-option.mat-multi-line .mat-list-item-content{padding-top:16px;padding-bottom:16px}.mat-list-base .mat-list-item .mat-list-text,.mat-list-base .mat-list-option .mat-list-text{display:flex;flex-direction:column;width:100%;box-sizing:border-box;overflow:hidden;padding:0}.mat-list-base .mat-list-item .mat-list-text&gt;*,.mat-list-base .mat-list-option .mat-list-text&gt;*{margin:0;padding:0;font-weight:400;font-size:inherit}.mat-list-base .mat-list-item .mat-list-text:empty,.mat-list-base .mat-list-option .mat-list-text:empty{display:none}.mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-item.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-option.mat-list-option .mat-list-item-content .mat-list-text{padding-right:0;padding-left:16px}[dir=rtl] .mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base .mat-list-item.mat-list-option .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base .mat-list-option.mat-list-option .mat-list-item-content .mat-list-text{padding-right:16px;padding-left:0}.mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-left:0;padding-right:16px}[dir=rtl] .mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-right:0;padding-left:16px}.mat-list-base .mat-list-item.mat-list-item-with-avatar.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-item.mat-list-item-with-avatar.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-option.mat-list-item-with-avatar.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-option.mat-list-item-with-avatar.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-right:16px;padding-left:16px}.mat-list-base .mat-list-item .mat-list-avatar,.mat-list-base .mat-list-option .mat-list-avatar{flex-shrink:0;width:40px;height:40px;border-radius:50%;object-fit:cover}.mat-list-base .mat-list-item .mat-list-avatar~.mat-divider-inset,.mat-list-base .mat-list-option .mat-list-avatar~.mat-divider-inset{margin-left:72px;width:calc(100% - 72px)}[dir=rtl] .mat-list-base .mat-list-item .mat-list-avatar~.mat-divider-inset,[dir=rtl] .mat-list-base .mat-list-option .mat-list-avatar~.mat-divider-inset{margin-left:auto;margin-right:72px}.mat-list-base .mat-list-item .mat-list-icon,.mat-list-base .mat-list-option .mat-list-icon{flex-shrink:0;width:24px;height:24px;font-size:24px;box-sizing:content-box;border-radius:50%;padding:4px}.mat-list-base .mat-list-item .mat-list-icon~.mat-divider-inset,.mat-list-base .mat-list-option .mat-list-icon~.mat-divider-inset{margin-left:64px;width:calc(100% - 64px)}[dir=rtl] .mat-list-base .mat-list-item .mat-list-icon~.mat-divider-inset,[dir=rtl] .mat-list-base .mat-list-option .mat-list-icon~.mat-divider-inset{margin-left:auto;margin-right:64px}.mat-list-base .mat-list-item .mat-divider,.mat-list-base .mat-list-option .mat-divider{position:absolute;bottom:0;left:0;width:100%;margin:0}[dir=rtl] .mat-list-base .mat-list-item .mat-divider,[dir=rtl] .mat-list-base .mat-list-option .mat-divider{margin-left:auto;margin-right:0}.mat-list-base .mat-list-item .mat-divider.mat-divider-inset,.mat-list-base .mat-list-option .mat-divider.mat-divider-inset{position:absolute}.mat-list-base[dense]{padding-top:4px;display:block}.mat-list-base[dense] .mat-subheader{height:40px;line-height:8px}.mat-list-base[dense] .mat-subheader:first-child{margin-top:-4px}.mat-list-base[dense] .mat-list-item,.mat-list-base[dense] .mat-list-option{display:block;height:40px;-webkit-tap-highlight-color:transparent;width:100%;padding:0}.mat-list-base[dense] .mat-list-item .mat-list-item-content,.mat-list-base[dense] .mat-list-option .mat-list-item-content{display:flex;flex-direction:row;align-items:center;box-sizing:border-box;padding:0 16px;position:relative;height:inherit}.mat-list-base[dense] .mat-list-item .mat-list-item-content-reverse,.mat-list-base[dense] .mat-list-option .mat-list-item-content-reverse{display:flex;align-items:center;padding:0 16px;flex-direction:row-reverse;justify-content:space-around}.mat-list-base[dense] .mat-list-item .mat-list-item-ripple,.mat-list-base[dense] .mat-list-option .mat-list-item-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar{height:48px}.mat-list-base[dense] .mat-list-item.mat-2-line,.mat-list-base[dense] .mat-list-option.mat-2-line{height:60px}.mat-list-base[dense] .mat-list-item.mat-3-line,.mat-list-base[dense] .mat-list-option.mat-3-line{height:76px}.mat-list-base[dense] .mat-list-item.mat-multi-line,.mat-list-base[dense] .mat-list-option.mat-multi-line{height:auto}.mat-list-base[dense] .mat-list-item.mat-multi-line .mat-list-item-content,.mat-list-base[dense] .mat-list-option.mat-multi-line .mat-list-item-content{padding-top:16px;padding-bottom:16px}.mat-list-base[dense] .mat-list-item .mat-list-text,.mat-list-base[dense] .mat-list-option .mat-list-text{display:flex;flex-direction:column;width:100%;box-sizing:border-box;overflow:hidden;padding:0}.mat-list-base[dense] .mat-list-item .mat-list-text&gt;*,.mat-list-base[dense] .mat-list-option .mat-list-text&gt;*{margin:0;padding:0;font-weight:400;font-size:inherit}.mat-list-base[dense] .mat-list-item .mat-list-text:empty,.mat-list-base[dense] .mat-list-option .mat-list-text:empty{display:none}.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-item.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-option .mat-list-item-content .mat-list-text{padding-right:0;padding-left:16px}[dir=rtl] .mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-item.mat-list-option .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-option.mat-list-option .mat-list-item-content .mat-list-text{padding-right:16px;padding-left:0}.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-left:0;padding-right:16px}[dir=rtl] .mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-right:0;padding-left:16px}.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-right:16px;padding-left:16px}.mat-list-base[dense] .mat-list-item .mat-list-avatar,.mat-list-base[dense] .mat-list-option .mat-list-avatar{flex-shrink:0;width:36px;height:36px;border-radius:50%;object-fit:cover}.mat-list-base[dense] .mat-list-item .mat-list-avatar~.mat-divider-inset,.mat-list-base[dense] .mat-list-option .mat-list-avatar~.mat-divider-inset{margin-left:68px;width:calc(100% - 68px)}[dir=rtl] .mat-list-base[dense] .mat-list-item .mat-list-avatar~.mat-divider-inset,[dir=rtl] .mat-list-base[dense] .mat-list-option .mat-list-avatar~.mat-divider-inset{margin-left:auto;margin-right:68px}.mat-list-base[dense] .mat-list-item .mat-list-icon,.mat-list-base[dense] .mat-list-option .mat-list-icon{flex-shrink:0;width:20px;height:20px;font-size:20px;box-sizing:content-box;border-radius:50%;padding:4px}.mat-list-base[dense] .mat-list-item .mat-list-icon~.mat-divider-inset,.mat-list-base[dense] .mat-list-option .mat-list-icon~.mat-divider-inset{margin-left:60px;width:calc(100% - 60px)}[dir=rtl] .mat-list-base[dense] .mat-list-item .mat-list-icon~.mat-divider-inset,[dir=rtl] .mat-list-base[dense] .mat-list-option .mat-list-icon~.mat-divider-inset{margin-left:auto;margin-right:60px}.mat-list-base[dense] .mat-list-item .mat-divider,.mat-list-base[dense] .mat-list-option .mat-divider{position:absolute;bottom:0;left:0;width:100%;margin:0}[dir=rtl] .mat-list-base[dense] .mat-list-item .mat-divider,[dir=rtl] .mat-list-base[dense] .mat-list-option .mat-divider{margin-left:auto;margin-right:0}.mat-list-base[dense] .mat-list-item .mat-divider.mat-divider-inset,.mat-list-base[dense] .mat-list-option .mat-divider.mat-divider-inset{position:absolute}.mat-nav-list a{text-decoration:none;color:inherit}.mat-nav-list .mat-list-item{cursor:pointer;outline:0}mat-action-list button{background:0 0;color:inherit;border:none;font:inherit;outline:inherit;-webkit-tap-highlight-color:transparent;text-align:left}[dir=rtl] mat-action-list button{text-align:right}mat-action-list button::-moz-focus-inner{border:0}mat-action-list .mat-list-item{cursor:pointer;outline:inherit}.mat-list-option:not(.mat-list-item-disabled){cursor:pointer;outline:0}@media (-ms-high-contrast:active){.mat-selection-list:focus{outline-style:dotted}.mat-list-option:focus,.mat-list-option:hover,.mat-nav-list .mat-list-item:focus,.mat-nav-list .mat-list-item:hover,mat-action-list .mat-list-item:focus,mat-action-list .mat-list-item:hover{outline:dotted 1px}}@media (hover:none){.mat-action-list .mat-list-item:not(.mat-list-item-disabled):hover,.mat-list-option:not(.mat-list-item-disabled):hover,.mat-nav-list .mat-list-item:not(.mat-list-item-disabled):hover{background:0 0}}&lt;/style&gt;<br/>
+  &lt;script charset="utf-8" src="28-es2015.2837693ba590c31e8114.js"&gt;&lt;/script&gt;<br/>
+  &lt;script charset="utf-8" src="0-es2015.219fe9b3ea56dc19289b.js"&gt;&lt;/script&gt;<br/>
+  &lt;script charset="utf-8" src="3-es2015.7f8b01199fd8d655b480.js"&gt;&lt;/script&gt;<br/>
+  &lt;script charset="utf-8" src="5-es2015.2368baeb486a2ba991d8.js"&gt;&lt;/script&gt;<br/>
+  &lt;script charset="utf-8" src="7-es2015.8e82ae4796536a5c10e9.js"&gt;&lt;/script&gt;<br/>
+  &lt;script charset="utf-8" src="10-es2015.a0af07c9e0edee23acde.js"&gt;&lt;/script&gt;<br/>
+  &lt;script charset="utf-8" src="23-es2015.992df9ed3be4dbcd4365.js"&gt;&lt;/script&gt;<br/>
+  &lt;style&gt;&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-form-field{display:inline-block;position:relative;text-align:left}[dir=rtl] .mat-form-field{text-align:right}.mat-form-field-wrapper{position:relative}.mat-form-field-flex{display:inline-flex;align-items:baseline;box-sizing:border-box;width:100%}.mat-form-field-prefix,.mat-form-field-suffix{white-space:nowrap;flex:none;position:relative}.mat-form-field-infix{display:block;position:relative;flex:auto;min-width:0;width:180px}@media (-ms-high-contrast:active){.mat-form-field-infix{border-image:linear-gradient(transparent,transparent)}}.mat-form-field-label-wrapper{position:absolute;left:0;box-sizing:content-box;width:100%;height:100%;overflow:hidden;pointer-events:none}[dir=rtl] .mat-form-field-label-wrapper{left:auto;right:0}.mat-form-field-label{position:absolute;left:0;font:inherit;pointer-events:none;width:100%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;transform-origin:0 0;transition:transform .4s cubic-bezier(.25,.8,.25,1),color .4s cubic-bezier(.25,.8,.25,1),width .4s cubic-bezier(.25,.8,.25,1);display:none}[dir=rtl] .mat-form-field-label{transform-origin:100% 0;left:auto;right:0}.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label,.mat-form-field-empty.mat-form-field-label{display:block}.mat-form-field-autofill-control:-webkit-autofill+.mat-form-field-label-wrapper .mat-form-field-label{display:none}.mat-form-field-can-float .mat-form-field-autofill-control:-webkit-autofill+.mat-form-field-label-wrapper .mat-form-field-label{display:block;transition:none}.mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label,.mat-input-server[placeholder]:not(:placeholder-shown)+.mat-form-field-label-wrapper .mat-form-field-label{display:none}.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label,.mat-form-field-can-float .mat-input-server[placeholder]:not(:placeholder-shown)+.mat-form-field-label-wrapper .mat-form-field-label{display:block}.mat-form-field-label:not(.mat-form-field-empty){transition:none}.mat-form-field-underline{position:absolute;width:100%;pointer-events:none;transform:scaleY(1.0001)}.mat-form-field-ripple{position:absolute;left:0;width:100%;transform-origin:50%;transform:scaleX(.5);opacity:0;transition:background-color .3s cubic-bezier(.55,0,.55,.2)}.mat-form-field.mat-focused .mat-form-field-ripple,.mat-form-field.mat-form-field-invalid .mat-form-field-ripple{opacity:1;transform:scaleX(1);transition:transform .3s cubic-bezier(.25,.8,.25,1),opacity .1s cubic-bezier(.25,.8,.25,1),background-color .3s cubic-bezier(.25,.8,.25,1)}.mat-form-field-subscript-wrapper{position:absolute;box-sizing:border-box;width:100%;overflow:hidden}.mat-form-field-label-wrapper .mat-icon,.mat-form-field-subscript-wrapper .mat-icon{width:1em;height:1em;font-size:inherit;vertical-align:baseline}.mat-form-field-hint-wrapper{display:flex}.mat-form-field-hint-spacer{flex:1 0 1em}.mat-error{display:block}.mat-form-field-control-wrapper{position:relative}.mat-form-field._mat-animation-noopable .mat-form-field-label,.mat-form-field._mat-animation-noopable .mat-form-field-ripple{transition:none}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-form-field-appearance-fill .mat-form-field-flex{border-radius:4px 4px 0 0;padding:.75em .75em 0 .75em}@media (-ms-high-contrast:active){.mat-form-field-appearance-fill .mat-form-field-flex{outline:solid 1px}}.mat-form-field-appearance-fill .mat-form-field-underline::before{content:'';display:block;position:absolute;bottom:0;height:1px;width:100%}.mat-form-field-appearance-fill .mat-form-field-ripple{bottom:0;height:2px}@media (-ms-high-contrast:active){.mat-form-field-appearance-fill .mat-form-field-ripple{height:0;border-top:solid 2px}}.mat-form-field-appearance-fill:not(.mat-form-field-disabled) .mat-form-field-flex:hover~.mat-form-field-underline .mat-form-field-ripple{opacity:1;transform:none;transition:opacity .6s cubic-bezier(.25,.8,.25,1)}.mat-form-field-appearance-fill._mat-animation-noopable:not(.mat-form-field-disabled) .mat-form-field-flex:hover~.mat-form-field-underline .mat-form-field-ripple{transition:none}.mat-form-field-appearance-fill .mat-form-field-subscript-wrapper{padding:0 1em}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-input-element{font:inherit;background:0 0;color:currentColor;border:none;outline:0;padding:0;margin:0;width:100%;max-width:100%;vertical-align:bottom;text-align:inherit}.mat-input-element:-moz-ui-invalid{box-shadow:none}.mat-input-element::-ms-clear,.mat-input-element::-ms-reveal{display:none}.mat-input-element,.mat-input-element::-webkit-search-cancel-button,.mat-input-element::-webkit-search-decoration,.mat-input-element::-webkit-search-results-button,.mat-input-element::-webkit-search-results-decoration{-webkit-appearance:none}.mat-input-element::-webkit-caps-lock-indicator,.mat-input-element::-webkit-contacts-auto-fill-button,.mat-input-element::-webkit-credentials-auto-fill-button{visibility:hidden}.mat-input-element[type=date]::after,.mat-input-element[type=datetime-local]::after,.mat-input-element[type=datetime]::after,.mat-input-element[type=month]::after,.mat-input-element[type=time]::after,.mat-input-element[type=week]::after{content:' ';white-space:pre;width:1px}.mat-input-element::-webkit-calendar-picker-indicator,.mat-input-element::-webkit-clear-button,.mat-input-element::-webkit-inner-spin-button{font-size:.75em}.mat-input-element::placeholder{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;transition:color .4s .133s cubic-bezier(.25,.8,.25,1)}.mat-input-element::-moz-placeholder{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;transition:color .4s .133s cubic-bezier(.25,.8,.25,1)}.mat-input-element::-webkit-input-placeholder{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;transition:color .4s .133s cubic-bezier(.25,.8,.25,1)}.mat-input-element:-ms-input-placeholder{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;transition:color .4s .133s cubic-bezier(.25,.8,.25,1)}.mat-form-field-hide-placeholder .mat-input-element::placeholder{color:transparent!important;-webkit-text-fill-color:transparent;transition:none}.mat-form-field-hide-placeholder .mat-input-element::-moz-placeholder{color:transparent!important;-webkit-text-fill-color:transparent;transition:none}.mat-form-field-hide-placeholder .mat-input-element::-webkit-input-placeholder{color:transparent!important;-webkit-text-fill-color:transparent;transition:none}.mat-form-field-hide-placeholder .mat-input-element:-ms-input-placeholder{color:transparent!important;-webkit-text-fill-color:transparent;transition:none}textarea.mat-input-element{resize:vertical;overflow:auto}textarea.mat-input-element.cdk-textarea-autosize{resize:none}textarea.mat-input-element{padding:2px 0;margin:-2px 0}select.mat-input-element{-moz-appearance:none;-webkit-appearance:none;position:relative;background-color:transparent;display:inline-flex;box-sizing:border-box;padding-top:1em;top:-1em;margin-bottom:-1em}select.mat-input-element::-ms-expand{display:none}select.mat-input-element::-moz-focus-inner{border:0}select.mat-input-element:not(:disabled){cursor:pointer}select.mat-input-element::-ms-value{color:inherit;background:0 0}@media (-ms-high-contrast:active){.mat-focused select.mat-input-element::-ms-value{color:inherit}}.mat-form-field-type-mat-native-select .mat-form-field-infix::after{content:'';width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid;position:absolute;top:50%;right:0;margin-top:-2.5px;pointer-events:none}[dir=rtl] .mat-form-field-type-mat-native-select .mat-form-field-infix::after{right:auto;left:0}.mat-form-field-type-mat-native-select .mat-input-element{padding-right:15px}[dir=rtl] .mat-form-field-type-mat-native-select .mat-input-element{padding-right:0;padding-left:15px}.mat-form-field-type-mat-native-select .mat-form-field-label-wrapper{max-width:calc(100% - 10px)}.mat-form-field-type-mat-native-select.mat-form-field-appearance-outline .mat-form-field-infix::after{margin-top:-5px}.mat-form-field-type-mat-native-select.mat-form-field-appearance-fill .mat-form-field-infix::after{margin-top:-10px}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-form-field-appearance-legacy .mat-form-field-label{transform:perspective(100px);-ms-transform:none}.mat-form-field-appearance-legacy .mat-form-field-prefix .mat-icon,.mat-form-field-appearance-legacy .mat-form-field-suffix .mat-icon{width:1em}.mat-form-field-appearance-legacy .mat-form-field-prefix .mat-icon-button,.mat-form-field-appearance-legacy .mat-form-field-suffix .mat-icon-button{font:inherit;vertical-align:baseline}.mat-form-field-appearance-legacy .mat-form-field-prefix .mat-icon-button .mat-icon,.mat-form-field-appearance-legacy .mat-form-field-suffix .mat-icon-button .mat-icon{font-size:inherit}.mat-form-field-appearance-legacy .mat-form-field-underline{height:1px}@media (-ms-high-contrast:active){.mat-form-field-appearance-legacy .mat-form-field-underline{height:0;border-top:solid 1px}}.mat-form-field-appearance-legacy .mat-form-field-ripple{top:0;height:2px;overflow:hidden}@media (-ms-high-contrast:active){.mat-form-field-appearance-legacy .mat-form-field-ripple{height:0;border-top:solid 2px}}.mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline{background-position:0;background-color:transparent}@media (-ms-high-contrast:active){.mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline{border-top-style:dotted;border-top-width:2px}}.mat-form-field-appearance-legacy.mat-form-field-invalid:not(.mat-focused) .mat-form-field-ripple{height:1px}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-form-field-appearance-outline .mat-form-field-wrapper{margin:.25em 0}.mat-form-field-appearance-outline .mat-form-field-flex{padding:0 .75em 0 .75em;margin-top:-.25em;position:relative}.mat-form-field-appearance-outline .mat-form-field-prefix,.mat-form-field-appearance-outline .mat-form-field-suffix{top:.25em}.mat-form-field-appearance-outline .mat-form-field-outline{display:flex;position:absolute;top:.25em;left:0;right:0;bottom:0;pointer-events:none}.mat-form-field-appearance-outline .mat-form-field-outline-end,.mat-form-field-appearance-outline .mat-form-field-outline-start{border:1px solid currentColor;min-width:5px}.mat-form-field-appearance-outline .mat-form-field-outline-start{border-radius:5px 0 0 5px;border-right-style:none}[dir=rtl] .mat-form-field-appearance-outline .mat-form-field-outline-start{border-right-style:solid;border-left-style:none;border-radius:0 5px 5px 0}.mat-form-field-appearance-outline .mat-form-field-outline-end{border-radius:0 5px 5px 0;border-left-style:none;flex-grow:1}[dir=rtl] .mat-form-field-appearance-outline .mat-form-field-outline-end{border-left-style:solid;border-right-style:none;border-radius:5px 0 0 5px}.mat-form-field-appearance-outline .mat-form-field-outline-gap{border-radius:.000001px;border:1px solid currentColor;border-left-style:none;border-right-style:none}.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-outline-gap{border-top-color:transparent}.mat-form-field-appearance-outline .mat-form-field-outline-thick{opacity:0}.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-end,.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-gap,.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-start{border-width:2px;transition:border-color .3s cubic-bezier(.25,.8,.25,1)}.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline,.mat-form-field-appearance-outline.mat-form-field-invalid .mat-form-field-outline{opacity:0;transition:opacity .1s cubic-bezier(.25,.8,.25,1)}.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick,.mat-form-field-appearance-outline.mat-form-field-invalid .mat-form-field-outline-thick{opacity:1}.mat-form-field-appearance-outline:not(.mat-form-field-disabled) .mat-form-field-flex:hover .mat-form-field-outline{opacity:0;transition:opacity .6s cubic-bezier(.25,.8,.25,1)}.mat-form-field-appearance-outline:not(.mat-form-field-disabled) .mat-form-field-flex:hover .mat-form-field-outline-thick{opacity:1}.mat-form-field-appearance-outline .mat-form-field-subscript-wrapper{padding:0 1em}.mat-form-field-appearance-outline._mat-animation-noopable .mat-form-field-outline,.mat-form-field-appearance-outline._mat-animation-noopable .mat-form-field-outline-end,.mat-form-field-appearance-outline._mat-animation-noopable .mat-form-field-outline-gap,.mat-form-field-appearance-outline._mat-animation-noopable .mat-form-field-outline-start,.mat-form-field-appearance-outline._mat-animation-noopable:not(.mat-form-field-disabled) .mat-form-field-flex:hover~.mat-form-field-outline{transition:none}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-form-field-appearance-standard .mat-form-field-flex{padding-top:.75em}.mat-form-field-appearance-standard .mat-form-field-underline{height:1px}@media (-ms-high-contrast:active){.mat-form-field-appearance-standard .mat-form-field-underline{height:0;border-top:solid 1px}}.mat-form-field-appearance-standard .mat-form-field-ripple{bottom:0;height:2px}@media (-ms-high-contrast:active){.mat-form-field-appearance-standard .mat-form-field-ripple{height:0;border-top:2px}}.mat-form-field-appearance-standard.mat-form-field-disabled .mat-form-field-underline{background-position:0;background-color:transparent}@media (-ms-high-contrast:active){.mat-form-field-appearance-standard.mat-form-field-disabled .mat-form-field-underline{border-top-style:dotted;border-top-width:2px}}.mat-form-field-appearance-standard:not(.mat-form-field-disabled) .mat-form-field-flex:hover~.mat-form-field-underline .mat-form-field-ripple{opacity:1;transform:none;transition:opacity .6s cubic-bezier(.25,.8,.25,1)}.mat-form-field-appearance-standard._mat-animation-noopable:not(.mat-form-field-disabled) .mat-form-field-flex:hover~.mat-form-field-underline .mat-form-field-ripple{transition:none}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-form-field-appearance-legacy .mat-form-field-prefix .mat-datepicker-toggle-default-icon,.mat-form-field-appearance-legacy .mat-form-field-suffix .mat-datepicker-toggle-default-icon{width:1em}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-datepicker-toggle-default-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-datepicker-toggle-default-icon{display:block;width:1.5em;height:1.5em}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-datepicker-toggle-default-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-datepicker-toggle-default-icon{margin:auto}&lt;/style&gt;<br/>
+  &lt;style&gt;mat-table{display:block}mat-header-row{min-height:56px}mat-footer-row,mat-row{min-height:48px}mat-footer-row,mat-header-row,mat-row{display:flex;border-width:0;border-bottom-width:1px;border-style:solid;align-items:center;box-sizing:border-box}mat-footer-row::after,mat-header-row::after,mat-row::after{display:inline-block;min-height:inherit;content:''}mat-cell:first-of-type,mat-footer-cell:first-of-type,mat-header-cell:first-of-type{padding-left:24px}[dir=rtl] mat-cell:first-of-type,[dir=rtl] mat-footer-cell:first-of-type,[dir=rtl] mat-header-cell:first-of-type{padding-left:0;padding-right:24px}mat-cell:last-of-type,mat-footer-cell:last-of-type,mat-header-cell:last-of-type{padding-right:24px}[dir=rtl] mat-cell:last-of-type,[dir=rtl] mat-footer-cell:last-of-type,[dir=rtl] mat-header-cell:last-of-type{padding-right:0;padding-left:24px}mat-cell,mat-footer-cell,mat-header-cell{flex:1;display:flex;align-items:center;overflow:hidden;word-wrap:break-word;min-height:inherit}table.mat-table{border-spacing:0}tr.mat-header-row{height:56px}tr.mat-footer-row,tr.mat-row{height:48px}th.mat-header-cell{text-align:left}[dir=rtl] th.mat-header-cell{text-align:right}td.mat-cell,td.mat-footer-cell,th.mat-header-cell{padding:0;border-bottom-width:1px;border-bottom-style:solid}td.mat-cell:first-of-type,td.mat-footer-cell:first-of-type,th.mat-header-cell:first-of-type{padding-left:24px}[dir=rtl] td.mat-cell:first-of-type,[dir=rtl] td.mat-footer-cell:first-of-type,[dir=rtl] th.mat-header-cell:first-of-type{padding-left:0;padding-right:24px}td.mat-cell:last-of-type,td.mat-footer-cell:last-of-type,th.mat-header-cell:last-of-type{padding-right:24px}[dir=rtl] td.mat-cell:last-of-type,[dir=rtl] td.mat-footer-cell:last-of-type,[dir=rtl] th.mat-header-cell:last-of-type{padding-right:0;padding-left:24px}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-paginator{display:block}.mat-paginator-outer-container{display:flex}.mat-paginator-container{display:flex;align-items:center;justify-content:flex-end;min-height:56px;padding:0 8px;flex-wrap:wrap-reverse;width:100%}.mat-paginator-page-size{display:flex;align-items:baseline;margin-right:8px}[dir=rtl] .mat-paginator-page-size{margin-right:0;margin-left:8px}.mat-paginator-page-size-label{margin:0 4px}.mat-paginator-page-size-select{margin:6px 4px 0 4px;width:56px}.mat-paginator-page-size-select.mat-form-field-appearance-outline{width:64px}.mat-paginator-page-size-select.mat-form-field-appearance-fill{width:64px}.mat-paginator-range-label{margin:0 32px 0 24px}.mat-paginator-range-actions{display:flex;align-items:center}.mat-paginator-icon{width:28px;fill:currentColor}[dir=rtl] .mat-paginator-icon{transform:rotate(180deg)}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-select{display:inline-block;width:100%;outline:0}.mat-select-trigger{display:inline-table;cursor:pointer;position:relative;box-sizing:border-box}.mat-select-disabled .mat-select-trigger{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default}.mat-select-value{display:table-cell;max-width:0;width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.mat-select-value-text{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.mat-select-arrow-wrapper{display:table-cell;vertical-align:middle}.mat-form-field-appearance-fill .mat-select-arrow-wrapper{transform:translateY(-50%)}.mat-form-field-appearance-outline .mat-select-arrow-wrapper{transform:translateY(-25%)}.mat-form-field-appearance-standard.mat-form-field-has-label .mat-select:not(.mat-select-empty) .mat-select-arrow-wrapper{transform:translateY(-50%)}.mat-form-field-appearance-standard .mat-select.mat-select-empty .mat-select-arrow-wrapper{transition:transform .4s cubic-bezier(.25,.8,.25,1)}._mat-animation-noopable.mat-form-field-appearance-standard .mat-select.mat-select-empty .mat-select-arrow-wrapper{transition:none}.mat-select-arrow{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid;margin:0 4px}.mat-select-panel-wrap{flex-basis:100%}.mat-select-panel{min-width:112px;max-width:280px;overflow:auto;-webkit-overflow-scrolling:touch;padding-top:0;padding-bottom:0;max-height:256px;min-width:100%;border-radius:4px}@media (-ms-high-contrast:active){.mat-select-panel{outline:solid 1px}}.mat-select-panel .mat-optgroup-label,.mat-select-panel .mat-option{font-size:inherit;line-height:3em;height:3em}.mat-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-form-field-flex{cursor:pointer}.mat-form-field-type-mat-select .mat-form-field-label{width:calc(100% - 18px)}.mat-select-placeholder{transition:color .4s .133s cubic-bezier(.25,.8,.25,1)}._mat-animation-noopable .mat-select-placeholder{transition:none}.mat-form-field-hide-placeholder .mat-select-placeholder{color:transparent;-webkit-text-fill-color:transparent;transition:none;display:block}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-option{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;line-height:48px;height:48px;padding:0 16px;text-align:left;text-decoration:none;max-width:100%;position:relative;cursor:pointer;outline:0;display:flex;flex-direction:row;max-width:100%;box-sizing:border-box;align-items:center;-webkit-tap-highlight-color:transparent}.mat-option[disabled]{cursor:default}[dir=rtl] .mat-option{text-align:right}.mat-option .mat-icon{margin-right:16px;vertical-align:middle}.mat-option .mat-icon svg{vertical-align:top}[dir=rtl] .mat-option .mat-icon{margin-left:16px;margin-right:0}.mat-option[aria-disabled=true]{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default}.mat-optgroup .mat-option:not(.mat-option-multiple){padding-left:32px}[dir=rtl] .mat-optgroup .mat-option:not(.mat-option-multiple){padding-left:16px;padding-right:32px}@media (-ms-high-contrast:active){.mat-option{margin:0 1px}.mat-option.mat-active{border:solid 1px currentColor;margin:0}}.mat-option-text{display:inline-block;flex-grow:1;overflow:hidden;text-overflow:ellipsis}.mat-option .mat-option-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}@media (-ms-high-contrast:active){.mat-option .mat-option-ripple{opacity:.5}}.mat-option-pseudo-checkbox{margin-right:8px}[dir=rtl] .mat-option-pseudo-checkbox{margin-left:8px;margin-right:0}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-button .mat-button-focus-overlay,.mat-icon-button .mat-button-focus-overlay{opacity:0}.mat-button:hover .mat-button-focus-overlay,.mat-stroked-button:hover .mat-button-focus-overlay{opacity:.04}@media (hover:none){.mat-button:hover .mat-button-focus-overlay,.mat-stroked-button:hover .mat-button-focus-overlay{opacity:0}}.mat-button,.mat-flat-button,.mat-icon-button,.mat-stroked-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible}.mat-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner{border:0}.mat-button[disabled],.mat-flat-button[disabled],.mat-icon-button[disabled],.mat-stroked-button[disabled]{cursor:default}.mat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-button.cdk-program-focused .mat-button-focus-overlay,.mat-flat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-flat-button.cdk-program-focused .mat-button-focus-overlay,.mat-icon-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-icon-button.cdk-program-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner{border:0}.mat-raised-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0,0,0);transition:background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1)}.mat-raised-button::-moz-focus-inner{border:0}.mat-raised-button[disabled]{cursor:default}.mat-raised-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-raised-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-raised-button::-moz-focus-inner{border:0}._mat-animation-noopable.mat-raised-button{transition:none;animation:none}.mat-stroked-button{border:1px solid currentColor;padding:0 15px;line-height:34px}.mat-stroked-button .mat-button-focus-overlay,.mat-stroked-button .mat-button-ripple.mat-ripple{top:-1px;left:-1px;right:-1px;bottom:-1px}.mat-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0,0,0);transition:background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);min-width:0;border-radius:50%;width:56px;height:56px;padding:0;flex-shrink:0}.mat-fab::-moz-focus-inner{border:0}.mat-fab[disabled]{cursor:default}.mat-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-fab{transition:none;animation:none}.mat-fab .mat-button-wrapper{padding:16px 0;display:inline-block;line-height:24px}.mat-mini-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0,0,0);transition:background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);min-width:0;border-radius:50%;width:40px;height:40px;padding:0;flex-shrink:0}.mat-mini-fab::-moz-focus-inner{border:0}.mat-mini-fab[disabled]{cursor:default}.mat-mini-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-mini-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-mini-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-mini-fab{transition:none;animation:none}.mat-mini-fab .mat-button-wrapper{padding:8px 0;display:inline-block;line-height:24px}.mat-icon-button{padding:0;min-width:0;width:40px;height:40px;flex-shrink:0;line-height:40px;border-radius:50%}.mat-icon-button .mat-icon,.mat-icon-button i{line-height:24px}.mat-button-focus-overlay,.mat-button-ripple.mat-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none;border-radius:inherit}.mat-button-focus-overlay{opacity:0;transition:opacity .2s cubic-bezier(.35,0,.25,1),background-color .2s cubic-bezier(.35,0,.25,1)}._mat-animation-noopable .mat-button-focus-overlay{transition:none}@media (-ms-high-contrast:active){.mat-button-focus-overlay{background-color:#fff}}@media (-ms-high-contrast:black-on-white){.mat-button-focus-overlay{background-color:#000}}.mat-button-ripple-round{border-radius:50%;z-index:1}.mat-button .mat-button-wrapper&gt;*,.mat-fab .mat-button-wrapper&gt;*,.mat-flat-button .mat-button-wrapper&gt;*,.mat-icon-button .mat-button-wrapper&gt;*,.mat-mini-fab .mat-button-wrapper&gt;*,.mat-raised-button .mat-button-wrapper&gt;*,.mat-stroked-button .mat-button-wrapper&gt;*{vertical-align:middle}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{display:block;font-size:inherit;width:2.5em;height:2.5em}@media (-ms-high-contrast:active){.mat-button,.mat-fab,.mat-flat-button,.mat-icon-button,.mat-mini-fab,.mat-raised-button{outline:solid 1px}}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-tab-group{display:flex;flex-direction:column}.mat-tab-group.mat-tab-group-inverted-header{flex-direction:column-reverse}.mat-tab-label{height:48px;padding:0 24px;cursor:pointer;box-sizing:border-box;opacity:.6;min-width:160px;text-align:center;display:inline-flex;justify-content:center;align-items:center;white-space:nowrap;position:relative}.mat-tab-label:focus{outline:0}.mat-tab-label:focus:not(.mat-tab-disabled){opacity:1}@media (-ms-high-contrast:active){.mat-tab-label:focus{outline:dotted 2px}}.mat-tab-label.mat-tab-disabled{cursor:default}@media (-ms-high-contrast:active){.mat-tab-label.mat-tab-disabled{opacity:.5}}.mat-tab-label .mat-tab-label-content{display:inline-flex;justify-content:center;align-items:center;white-space:nowrap}@media (-ms-high-contrast:active){.mat-tab-label{opacity:1}}@media (max-width:599px){.mat-tab-label{padding:0 12px}}@media (max-width:959px){.mat-tab-label{padding:0 12px}}.mat-tab-group[mat-stretch-tabs]&gt;.mat-tab-header .mat-tab-label{flex-basis:0;flex-grow:1}.mat-tab-body-wrapper{position:relative;overflow:hidden;display:flex;transition:height .5s cubic-bezier(.35,0,.25,1)}.mat-tab-body{top:0;left:0;right:0;bottom:0;position:absolute;display:block;overflow:hidden;flex-basis:100%}.mat-tab-body.mat-tab-body-active{position:relative;overflow-x:hidden;overflow-y:auto;z-index:1;flex-grow:1}.mat-tab-group.mat-tab-group-dynamic-height .mat-tab-body.mat-tab-body-active{overflow-y:hidden}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-tab-header{display:flex;overflow:hidden;position:relative;flex-shrink:0}.mat-tab-label{height:48px;padding:0 24px;cursor:pointer;box-sizing:border-box;opacity:.6;min-width:160px;text-align:center;display:inline-flex;justify-content:center;align-items:center;white-space:nowrap;position:relative}.mat-tab-label:focus{outline:0}.mat-tab-label:focus:not(.mat-tab-disabled){opacity:1}@media (-ms-high-contrast:active){.mat-tab-label:focus{outline:dotted 2px}}.mat-tab-label.mat-tab-disabled{cursor:default}@media (-ms-high-contrast:active){.mat-tab-label.mat-tab-disabled{opacity:.5}}.mat-tab-label .mat-tab-label-content{display:inline-flex;justify-content:center;align-items:center;white-space:nowrap}@media (-ms-high-contrast:active){.mat-tab-label{opacity:1}}@media (max-width:599px){.mat-tab-label{min-width:72px}}.mat-ink-bar{position:absolute;bottom:0;height:2px;transition:.5s cubic-bezier(.35,0,.25,1)}.mat-tab-group-inverted-header .mat-ink-bar{bottom:auto;top:0}@media (-ms-high-contrast:active){.mat-ink-bar{outline:solid 2px;height:0}}.mat-tab-header-pagination{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:relative;display:none;justify-content:center;align-items:center;min-width:32px;cursor:pointer;z-index:2;-webkit-tap-highlight-color:transparent;touch-action:none}.mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination{display:flex}.mat-tab-header-pagination-before,.mat-tab-header-rtl .mat-tab-header-pagination-after{padding-left:4px}.mat-tab-header-pagination-before .mat-tab-header-pagination-chevron,.mat-tab-header-rtl .mat-tab-header-pagination-after .mat-tab-header-pagination-chevron{transform:rotate(-135deg)}.mat-tab-header-pagination-after,.mat-tab-header-rtl .mat-tab-header-pagination-before{padding-right:4px}.mat-tab-header-pagination-after .mat-tab-header-pagination-chevron,.mat-tab-header-rtl .mat-tab-header-pagination-before .mat-tab-header-pagination-chevron{transform:rotate(45deg)}.mat-tab-header-pagination-chevron{border-style:solid;border-width:2px 2px 0 0;content:'';height:8px;width:8px}.mat-tab-header-pagination-disabled{box-shadow:none;cursor:default}.mat-tab-label-container{display:flex;flex-grow:1;overflow:hidden;z-index:1}.mat-tab-list{flex-grow:1;position:relative;transition:transform .5s cubic-bezier(.35,0,.25,1)}.mat-tab-labels{display:flex}[mat-align-tabs=center] .mat-tab-labels{justify-content:center}[mat-align-tabs=end] .mat-tab-labels{justify-content:flex-end}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-tab-body-content{height:100%;overflow:auto}.mat-tab-group-dynamic-height .mat-tab-body-content{overflow:hidden}&lt;/style&gt;<br/>
+  &lt;style&gt;.mat-sort-header-container{display:flex;cursor:pointer;align-items:center}.mat-sort-header-disabled .mat-sort-header-container{cursor:default}.mat-sort-header-position-before{flex-direction:row-reverse}.mat-sort-header-button{border:none;background:0 0;display:flex;align-items:center;padding:0;cursor:inherit;outline:0;font:inherit;color:currentColor}.mat-sort-header-button::-moz-focus-inner{border:0}.mat-sort-header-arrow{height:12px;width:12px;min-width:12px;position:relative;display:flex;opacity:0}.mat-sort-header-arrow,[dir=rtl] .mat-sort-header-position-before .mat-sort-header-arrow{margin:0 0 0 6px}.mat-sort-header-position-before .mat-sort-header-arrow,[dir=rtl] .mat-sort-header-arrow{margin:0 6px 0 0}.mat-sort-header-stem{background:currentColor;height:10px;width:2px;margin:auto;display:flex;align-items:center}@media (-ms-high-contrast:active){.mat-sort-header-stem{width:0;border-left:solid 2px}}.mat-sort-header-indicator{width:100%;height:2px;display:flex;align-items:center;position:absolute;top:0;left:0}.mat-sort-header-pointer-middle{margin:auto;height:2px;width:2px;background:currentColor;transform:rotate(45deg)}@media (-ms-high-contrast:active){.mat-sort-header-pointer-middle{width:0;height:0;border-top:solid 2px;border-left:solid 2px}}.mat-sort-header-pointer-left,.mat-sort-header-pointer-right{background:currentColor;width:6px;height:2px;position:absolute;top:0}@media (-ms-high-contrast:active){.mat-sort-header-pointer-left,.mat-sort-header-pointer-right{width:0;height:0;border-left:solid 6px;border-top:solid 2px}}.mat-sort-header-pointer-left{transform-origin:right;left:0}.mat-sort-header-pointer-right{transform-origin:left;right:0}&lt;/style&gt;<br/>
+ &lt;/head&gt; <br/>
+ &lt;body&gt; &lt;app-root _nghost-nct-c0="" ng-version="8.2.14"&gt;<br/>
+   &lt;!----&gt;<br/>
+   &lt;app-menu _ngcontent-nct-c0="" class="nav justify-content-center ng-tns-c1-0 ng-star-inserted" _nghost-nct-c1=""&gt;<br/>
+    &lt;div _ngcontent-nct-c1="" class="menu"&gt;<br/>
+     &lt;div _ngcontent-nct-c1="" class="ng-tns-c1-0" id="header-menu"&gt;<br/>
+      &lt;div _ngcontent-nct-c1="" class="ng-tns-c1-0" id="logo-menu"&gt;&lt;/div&gt;<br/>
+      &lt;div _ngcontent-nct-c1="" class="ng-tns-c1-0" id="info-menu"&gt;<br/>
+       &lt;div _ngcontent-nct-c1="" class="ng-tns-c1-0" id="info-fecha"&gt;<br/>
+         21 | Jul | 2025 <br/>
+       &lt;/div&gt;<br/>
+       &lt;div _ngcontent-nct-c1="" class="ng-tns-c1-0" id="info-usuario"&gt;<br/>
+         RH <br/>
+       &lt;/div&gt;&lt;!----&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;div _ngcontent-nct-c1="" class="ng-tns-c1-0" id="opciones-menu"&gt;<br/>
+      &lt;!----&gt;<br/>
+      &lt;div _ngcontent-nct-c1="" aria-haspopup="true" class="opcion-menu ng-tns-c1-0 ng-star-inserted"&gt;<br/>
+       &lt;img _ngcontent-nct-c1="" class="opcion-icon" alt="Módulo de Básicas" id="iconoMenu" src="assets/icons/menu/icon-basicas.svg"&gt;&lt;span _ngcontent-nct-c1="" class="ng-tns-c1-0"&gt;Básicas&lt;/span&gt;<br/>
+      &lt;/div&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+      &lt;div _ngcontent-nct-c1="" aria-haspopup="true" class="opcion-menu ng-tns-c1-0 ng-star-inserted"&gt;<br/>
+       &lt;img _ngcontent-nct-c1="" class="opcion-icon" alt="Módulo de Clientes" id="iconoMenu" src="assets/icons/menu/icon-clientes.svg"&gt;&lt;span _ngcontent-nct-c1="" class="ng-tns-c1-0"&gt;Clientes&lt;/span&gt;<br/>
+      &lt;/div&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+      &lt;div _ngcontent-nct-c1="" aria-haspopup="true" class="opcion-menu ng-tns-c1-0 ng-star-inserted"&gt;<br/>
+       &lt;img _ngcontent-nct-c1="" class="opcion-icon" alt="Módulo de Facturación" id="iconoMenu" src="assets/icons/menu/icon-facturacion.svg"&gt;&lt;span _ngcontent-nct-c1="" class="ng-tns-c1-0"&gt;Facturación&lt;/span&gt;<br/>
+      &lt;/div&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+      &lt;div _ngcontent-nct-c1="" aria-haspopup="true" class="opcion-menu ng-tns-c1-0 ng-star-inserted"&gt;<br/>
+       &lt;img _ngcontent-nct-c1="" class="opcion-icon" alt="Módulo de Recaudo" id="iconoMenu" src="assets/icons/menu/icon-recaudo.svg"&gt;&lt;span _ngcontent-nct-c1="" class="ng-tns-c1-0"&gt;Recaudo&lt;/span&gt;<br/>
+      &lt;/div&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+      &lt;div _ngcontent-nct-c1="" aria-haspopup="true" class="opcion-menu ng-tns-c1-0 ng-star-inserted"&gt;<br/>
+       &lt;img _ngcontent-nct-c1="" class="opcion-icon" alt="Módulo de Cartera" id="iconoMenu" src="assets/icons/menu/icon-cartera.svg"&gt;&lt;span _ngcontent-nct-c1="" class="ng-tns-c1-0"&gt;Cartera&lt;/span&gt;<br/>
+      &lt;/div&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+      &lt;div _ngcontent-nct-c1="" aria-haspopup="true" class="opcion-menu ng-tns-c1-0 ng-star-inserted"&gt;<br/>
+       &lt;img _ngcontent-nct-c1="" class="opcion-icon" alt="Módulo de Consultas" id="iconoMenu" src="assets/icons/menu/icon-consultas.svg"&gt;&lt;span _ngcontent-nct-c1="" class="ng-tns-c1-0"&gt;Consultas&lt;/span&gt;<br/>
+      &lt;/div&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+      &lt;div _ngcontent-nct-c1="" aria-haspopup="true" class="opcion-menu ng-tns-c1-0 ng-star-inserted"&gt;<br/>
+       &lt;img _ngcontent-nct-c1="" class="opcion-icon" alt="Módulo de Reportes" id="iconoMenu" src="assets/icons/menu/icon-reportes.svg"&gt;&lt;span _ngcontent-nct-c1="" class="ng-tns-c1-0"&gt;Reportes&lt;/span&gt;<br/>
+      &lt;/div&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+      &lt;div _ngcontent-nct-c1="" aria-haspopup="true" class="opcion-menu ng-tns-c1-0 ng-star-inserted"&gt;<br/>
+       &lt;img _ngcontent-nct-c1="" class="opcion-icon" alt="Módulo de Cláusula" id="iconoMenu" src="assets/icons/menu/icon-clausula.svg"&gt;&lt;span _ngcontent-nct-c1="" class="ng-tns-c1-0"&gt;Cláusula&lt;/span&gt;<br/>
+      &lt;/div&gt;&lt;!----&gt;&lt;mat-menu _ngcontent-nct-c1="" class="ng-tns-c1-0 ng-tns-c6-1" xposition="after"&gt;<br/>
+       &lt;!----&gt;<br/>
+      &lt;/mat-menu&gt;&lt;mat-menu _ngcontent-nct-c1="" class="ng-tns-c1-0 ng-tns-c6-2" xposition="after"&gt;<br/>
+       &lt;!----&gt;<br/>
+      &lt;/mat-menu&gt;&lt;mat-menu _ngcontent-nct-c1="" class="ng-tns-c1-0 ng-tns-c6-3" xposition="after"&gt;<br/>
+       &lt;!----&gt;<br/>
+      &lt;/mat-menu&gt;&lt;mat-menu _ngcontent-nct-c1="" class="ng-tns-c1-0 ng-tns-c6-4" xposition="after"&gt;<br/>
+       &lt;!----&gt;<br/>
+      &lt;/mat-menu&gt;&lt;mat-menu _ngcontent-nct-c1="" class="ng-tns-c1-0 ng-tns-c6-5" xposition="after"&gt;<br/>
+       &lt;!----&gt;<br/>
+      &lt;/mat-menu&gt;&lt;mat-menu _ngcontent-nct-c1="" class="ng-tns-c1-0 ng-tns-c6-6" aria-haspopup="true" xposition="after"&gt;<br/>
+       &lt;!----&gt;<br/>
+      &lt;/mat-menu&gt;&lt;mat-menu _ngcontent-nct-c1="" class="ng-tns-c1-0 ng-tns-c6-7" xposition="after"&gt;<br/>
+       &lt;!----&gt;<br/>
+      &lt;/mat-menu&gt;&lt;mat-menu _ngcontent-nct-c1="" class="ng-tns-c1-0 ng-tns-c6-8" xposition="after"&gt;<br/>
+       &lt;!----&gt;<br/>
+      &lt;/mat-menu&gt;&lt;mat-menu _ngcontent-nct-c1="" class="ng-tns-c1-0 ng-tns-c6-9" xposition="after"&gt;<br/>
+       &lt;!----&gt;<br/>
+      &lt;/mat-menu&gt;<br/>
+     &lt;/div&gt;<br/>
+    &lt;/div&gt;&lt;!----&gt;<br/>
+   &lt;/app-menu&gt;&lt;!----&gt;<br/>
+   &lt;app-estado-procesos _ngcontent-nct-c0="" class="contenedor ng-star-inserted" _nghost-nct-c2=""&gt;<br/>
+    &lt;button _ngcontent-nct-c2="" class="boton boton-procesos" mattooltip="Click para ver estado de los procesos" aria-describedby="cdk-describedby-message-0" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"&gt;&lt;!----&gt;<br/>
+     &lt;mat-icon _ngcontent-nct-c2="" aria-hidden="false" aria-label="Example home icon" class="mat-icon notranslate material-icons mat-icon-no-color ng-star-inserted" role="img"&gt;<br/>
+      format_list_bulleted <br/>
+     &lt;/mat-icon&gt;&lt;!----&gt; Procesos &lt;/button&gt;<br/>
+   &lt;/app-estado-procesos&gt;<br/>
+   &lt;div _ngcontent-nct-c0="" class="container"&gt;<br/>
+    &lt;router-outlet _ngcontent-nct-c0="" class="contenedor-paginas"&gt;&lt;/router-outlet&gt;&lt;app-planes class="voz-corporativa ng-star-inserted" _nghost-nct-c9=""&gt;<br/>
+     &lt;!----&gt;<br/>
+     &lt;loading _ngcontent-nct-c9="" _nghost-nct-c4="" class="ng-star-inserted"&gt;<br/>
+      &lt;div _ngcontent-nct-c4="" class="no-freeze-spinner"&gt;<br/>
+       &lt;div _ngcontent-nct-c4="" id="no-freeze-spinner"&gt;<br/>
+        &lt;div _ngcontent-nct-c4=""&gt;<br/>
+         &lt;!----&gt;<br/>
+         &lt;img _ngcontent-nct-c4="" alt="iconos" class="iconos ng-star-inserted" src="assets/icons/menu/icon-basicas.svg"&gt;<br/>
+         &lt;img _ngcontent-nct-c4="" alt="iconos" class="iconos ng-star-inserted" src="assets/icons/menu/icon-cartera.svg"&gt;<br/>
+         &lt;img _ngcontent-nct-c4="" alt="iconos" class="iconos ng-star-inserted" src="assets/icons/menu/icon-clausula.svg"&gt;<br/>
+         &lt;img _ngcontent-nct-c4="" alt="iconos" class="iconos ng-star-inserted" src="assets/icons/menu/icon-clientes.svg"&gt;<br/>
+         &lt;img _ngcontent-nct-c4="" alt="iconos" class="iconos ng-star-inserted" src="assets/icons/menu/icon-consultas.svg"&gt;<br/>
+         &lt;img _ngcontent-nct-c4="" alt="iconos" class="iconos ng-star-inserted" src="assets/icons/menu/icon-facturacion.svg"&gt;<br/>
+         &lt;img _ngcontent-nct-c4="" alt="iconos" class="iconos ng-star-inserted" src="assets/icons/menu/icon-recaudo.svg"&gt;<br/>
+         &lt;div _ngcontent-nct-c4=""&gt;&lt;/div&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/loading&gt;<br/>
+     &lt;div _ngcontent-nct-c9="" class="container"&gt;<br/>
+      &lt;h3 _ngcontent-nct-c9="" class="tittle-option"&gt; Mantenimiento Planes Voz Corporativa&lt;/h3&gt;&lt;!----&gt;&lt;mat-tab-group _ngcontent-nct-c9="" class="tab-opciones mat-tab-group mat-primary ng-star-inserted"&gt;<br/>
+       &lt;mat-tab-header class="mat-tab-header"&gt;<br/>
+        &lt;div aria-hidden="true" class="mat-tab-header-pagination mat-tab-header-pagination-before mat-elevation-z4 mat-ripple mat-tab-header-pagination-disabled" mat-ripple=""&gt;<br/>
+         &lt;div class="mat-tab-header-pagination-chevron"&gt;&lt;/div&gt;<br/>
+        &lt;/div&gt;<br/>
+        &lt;div class="mat-tab-label-container"&gt;<br/>
+         &lt;div class="mat-tab-list" role="tablist" style="transform: translateX(0px);"&gt;<br/>
+          &lt;div class="mat-tab-labels"&gt;<br/>
+           &lt;!----&gt;<br/>
+           &lt;div cdkmonitorelementfocus="" class="mat-tab-label mat-ripple ng-star-inserted" mat-ripple="" mattablabelwrapper="" role="tab" id="mat-tab-label-0-0" tabindex="-1" aria-posinset="1" aria-setsize="2" aria-controls="mat-tab-content-0-0" aria-selected="false" aria-disabled="false"&gt;<br/>
+            &lt;div class="mat-tab-label-content"&gt;<br/>
+             &lt;!----&gt;&lt;!----&gt;&lt;mat-icon _ngcontent-nct-c9="" class="example-tab-icon mat-icon notranslate mat-primary material-icons ng-star-inserted" color="primary" role="img" aria-hidden="true"&gt;<br/>
+              add_circle<br/>
+             &lt;/mat-icon&gt; Agregar &lt;!----&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+           &lt;div cdkmonitorelementfocus="" class="mat-tab-label mat-ripple ng-star-inserted mat-tab-label-active" mat-ripple="" mattablabelwrapper="" role="tab" id="mat-tab-label-0-1" tabindex="0" aria-posinset="2" aria-setsize="2" aria-controls="mat-tab-content-0-1" aria-selected="true" aria-disabled="false"&gt;<br/>
+            &lt;div class="mat-tab-label-content"&gt;<br/>
+             &lt;!----&gt;&lt;!----&gt;&lt;mat-icon _ngcontent-nct-c9="" class="example-tab-icon mat-icon notranslate mat-primary material-icons ng-star-inserted" color="primary" role="img" aria-hidden="true"&gt;<br/>
+              search<br/>
+             &lt;/mat-icon&gt; Buscar &lt;!----&gt;&lt;!----&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div class="mat-ripple-element" style="left: -1.11354px; top: -247.66px; height: 542.227px; width: 542.227px; transition-duration: 400ms; transform: scale(1); opacity: 0;"&gt;&lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;&lt;mat-ink-bar class="mat-ink-bar" style="visibility: visible; left: 540px; width: 540px;"&gt;&lt;/mat-ink-bar&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/div&gt;<br/>
+        &lt;div aria-hidden="true" class="mat-tab-header-pagination mat-tab-header-pagination-after mat-elevation-z4 mat-ripple mat-tab-header-pagination-disabled" mat-ripple=""&gt;<br/>
+         &lt;div class="mat-tab-header-pagination-chevron"&gt;&lt;/div&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/mat-tab-header&gt;<br/>
+       &lt;div class="mat-tab-body-wrapper"&gt;<br/>
+        &lt;!----&gt;&lt;mat-tab-body class="mat-tab-body ng-tns-c22-27 ng-star-inserted" role="tabpanel" id="mat-tab-content-0-0" aria-labelledby="mat-tab-label-0-0"&gt;<br/>
+         &lt;div class="mat-tab-body-content ng-trigger ng-trigger-translateTab" style="transform: translate3d(-100%, 0px, 0px); min-height: 1px;"&gt;<br/>
+          &lt;!----&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-tab-body&gt;&lt;mat-tab-body class="mat-tab-body ng-tns-c22-28 ng-star-inserted mat-tab-body-active" role="tabpanel" id="mat-tab-content-0-1" aria-labelledby="mat-tab-label-0-1"&gt;<br/>
+         &lt;div class="mat-tab-body-content ng-trigger ng-trigger-translateTab" style="transform: none;"&gt;<br/>
+          &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-tab-body&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/mat-tab-group&gt;<br/>
+      &lt;form _ngcontent-nct-c9="" class="formulario ng-valid ng-dirty ng-touched" novalidate&gt;<br/>
+       &lt;div _ngcontent-nct-c9="" class="form-row mt-3"&gt;<br/>
+        &lt;mat-form-field _ngcontent-nct-c9="" class="example-full-width col-md-3 mat-form-field ng-tns-c11-10 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-valid mat-form-field-should-float ng-dirty ng-touched"&gt;<br/>
+         &lt;div class="mat-form-field-wrapper"&gt;<br/>
+          &lt;div class="mat-form-field-flex"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-infix"&gt;<br/>
+            &lt;input _ngcontent-nct-c9="" solonumeros="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-valid ng-dirty ng-touched" formcontrolname="codPlan" matinput="" maxlength="9" placeholder="Código plan" type="number" id="mat-input-0" aria-invalid="false" aria-required="false"&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;label class="mat-form-field-label ng-tns-c11-10 ng-star-inserted" id="mat-form-field-label-1" for="mat-input-0" aria-owns="mat-input-0"&gt;&lt;!----&gt;&lt;!----&gt;Código plan&lt;!----&gt;&lt;!----&gt;&lt;/label&gt;&lt;/span&gt;<br/>
+           &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-underline ng-tns-c11-10 ng-star-inserted"&gt;<br/>
+           &lt;span class="mat-form-field-ripple"&gt;&lt;/span&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-10 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+            &lt;!----&gt;<br/>
+            &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-form-field&gt;&lt;mat-form-field _ngcontent-nct-c9="" class="example-full-width col-md-9 mat-form-field ng-tns-c11-11 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid"&gt;<br/>
+         &lt;div class="mat-form-field-wrapper"&gt;<br/>
+          &lt;div class="mat-form-field-flex"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-infix"&gt;<br/>
+            &lt;input _ngcontent-nct-c9="" camponombre="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" formcontrolname="descripcion" matinput="" maxlength="30" placeholder="Descripcion" type="text" id="mat-input-1" aria-describedby="mat-hint-0" aria-invalid="false" aria-required="false"&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;label class="mat-form-field-label ng-tns-c11-11 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-3" for="mat-input-1" aria-owns="mat-input-1"&gt;&lt;!----&gt;&lt;!----&gt;Descripcion&lt;!----&gt;&lt;!----&gt;&lt;/label&gt;&lt;/span&gt;<br/>
+           &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-underline ng-tns-c11-11 ng-star-inserted"&gt;<br/>
+           &lt;span class="mat-form-field-ripple"&gt;&lt;/span&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-11 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+            &lt;!----&gt;<br/>
+            &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;&lt;mat-hint _ngcontent-nct-c9="" class="mat-hint mat-right" id="mat-hint-0"&gt;<br/>
+              / 30<br/>
+            &lt;/mat-hint&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-form-field&gt;&lt;dominio-general _ngcontent-nct-c9="" class="example-full-width col-md-3" _nghost-nct-c12=""&gt;<br/>
+         &lt;mat-form-field _ngcontent-nct-c12="" class="w-100 mat-form-field ng-tns-c11-25 mat-primary mat-form-field-type-mat-select mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder"&gt;<br/>
+          &lt;div class="mat-form-field-wrapper"&gt;<br/>
+           &lt;div class="mat-form-field-flex"&gt;<br/>
+            &lt;!----&gt;&lt;!----&gt;<br/>
+            &lt;div class="mat-form-field-infix"&gt;<br/>
+             &lt;mat-select _ngcontent-nct-c12="" class="mat-select ng-tns-c18-26 mat-select-empty ng-star-inserted" disableripple="" role="listbox" id="mat-select-0" tabindex="0" aria-labelledby="mat-form-field-label-31" aria-required="false" aria-disabled="false" aria-invalid="false" aria-multiselectable="false"&gt;<br/>
+              &lt;div class="mat-select-trigger" aria-hidden="true" cdk-overlay-origin=""&gt;<br/>
+               &lt;div class="mat-select-value"&gt;<br/>
+                &lt;!----&gt;&lt;span class="mat-select-placeholder ng-tns-c18-26 ng-star-inserted"&gt;&nbsp;&lt;/span&gt;&lt;!----&gt;<br/>
+               &lt;/div&gt;<br/>
+               &lt;div class="mat-select-arrow-wrapper"&gt;<br/>
+                &lt;div class="mat-select-arrow"&gt;&lt;/div&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;&lt;!----&gt;<br/>
+             &lt;/mat-select&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;label class="mat-form-field-label ng-tns-c11-25 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-31" for="mat-select-0" aria-owns="mat-select-0"&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+               &lt;mat-label _ngcontent-nct-c12="" class="ng-star-inserted"&gt;<br/>
+                Tipo de plan<br/>
+               &lt;/mat-label&gt;&lt;!----&gt;&lt;!----&gt;&lt;/label&gt;&lt;/span&gt;<br/>
+            &lt;/div&gt;&lt;!----&gt;<br/>
+           &lt;/div&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-underline ng-tns-c11-25 ng-star-inserted"&gt;<br/>
+            &lt;span class="mat-form-field-ripple"&gt;&lt;/span&gt;<br/>
+           &lt;/div&gt;<br/>
+           &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+            &lt;!----&gt;&lt;!----&gt;<br/>
+            &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-25 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+             &lt;!----&gt;<br/>
+             &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/mat-form-field&gt;<br/>
+        &lt;/dominio-general&gt;&lt;mat-form-field _ngcontent-nct-c9="" class="example-full-width col-md-3 mat-form-field ng-tns-c11-12 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid"&gt;<br/>
+         &lt;div class="mat-form-field-wrapper"&gt;<br/>
+          &lt;div class="mat-form-field-flex"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-infix"&gt;<br/>
+            &lt;input _ngcontent-nct-c9="" solonumeros="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" formcontrolname="unidadesIncl" matinput="" maxlength="9" placeholder="Unidades Incluidas" type="number" id="mat-input-2" aria-invalid="false" aria-required="false"&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;label class="mat-form-field-label ng-tns-c11-12 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-5" for="mat-input-2" aria-owns="mat-input-2"&gt;&lt;!----&gt;&lt;!----&gt;Unidades Incluidas&lt;!----&gt;&lt;!----&gt;&lt;/label&gt;&lt;/span&gt;<br/>
+           &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-underline ng-tns-c11-12 ng-star-inserted"&gt;<br/>
+           &lt;span class="mat-form-field-ripple"&gt;&lt;/span&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-12 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+            &lt;!----&gt;<br/>
+            &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-form-field&gt;&lt;mat-form-field _ngcontent-nct-c9="" class="example-full-width col-md-3 mat-form-field ng-tns-c11-13 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid"&gt;<br/>
+         &lt;div class="mat-form-field-wrapper"&gt;<br/>
+          &lt;div class="mat-form-field-flex"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-infix"&gt;<br/>
+            &lt;input _ngcontent-nct-c9="" solonumeros="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" formcontrolname="cargoFijo" matinput="" maxlength="9" placeholder="Cargo Fijo" type="number" id="mat-input-3" aria-invalid="false" aria-required="false"&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;label class="mat-form-field-label ng-tns-c11-13 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-7" for="mat-input-3" aria-owns="mat-input-3"&gt;&lt;!----&gt;&lt;!----&gt;Cargo Fijo&lt;!----&gt;&lt;!----&gt;&lt;/label&gt;&lt;/span&gt;<br/>
+           &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-underline ng-tns-c11-13 ng-star-inserted"&gt;<br/>
+           &lt;span class="mat-form-field-ripple"&gt;&lt;/span&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-13 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+            &lt;!----&gt;<br/>
+            &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-form-field&gt;&lt;mat-form-field _ngcontent-nct-c9="" class="example-full-width col-md-3 mat-form-field ng-tns-c11-14 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid"&gt;<br/>
+         &lt;div class="mat-form-field-wrapper"&gt;<br/>
+          &lt;div class="mat-form-field-flex"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-infix"&gt;<br/>
+            &lt;input _ngcontent-nct-c9="" solonumeros="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" formcontrolname="valorMinutoLdnIncluido" matinput="" maxlength="9" placeholder="Valor Minuto Ldn Incluido" type="number" id="mat-input-4" aria-invalid="false" aria-required="false"&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;label class="mat-form-field-label ng-tns-c11-14 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-9" for="mat-input-4" aria-owns="mat-input-4"&gt;&lt;!----&gt;&lt;!----&gt;Valor Minuto Ldn Incluido&lt;!----&gt;&lt;!----&gt;&lt;/label&gt;&lt;/span&gt;<br/>
+           &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-underline ng-tns-c11-14 ng-star-inserted"&gt;<br/>
+           &lt;span class="mat-form-field-ripple"&gt;&lt;/span&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-14 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+            &lt;!----&gt;<br/>
+            &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-form-field&gt;&lt;mat-form-field _ngcontent-nct-c9="" class="example-full-width col-md-3 mat-form-field ng-tns-c11-15 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid"&gt;<br/>
+         &lt;div class="mat-form-field-wrapper"&gt;<br/>
+          &lt;div class="mat-form-field-flex"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-infix"&gt;<br/>
+            &lt;input _ngcontent-nct-c9="" solonumeros="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" formcontrolname="valorMinutoLdiIncluido" matinput="" maxlength="9" placeholder="Valor Minuto Ldi Incluido" type="number" id="mat-input-5" aria-invalid="false" aria-required="false"&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;label class="mat-form-field-label ng-tns-c11-15 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-11" for="mat-input-5" aria-owns="mat-input-5"&gt;&lt;!----&gt;&lt;!----&gt;Valor Minuto Ldi Incluido&lt;!----&gt;&lt;!----&gt;&lt;/label&gt;&lt;/span&gt;<br/>
+           &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-underline ng-tns-c11-15 ng-star-inserted"&gt;<br/>
+           &lt;span class="mat-form-field-ripple"&gt;&lt;/span&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-15 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+            &lt;!----&gt;<br/>
+            &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-form-field&gt;&lt;mat-form-field _ngcontent-nct-c9="" class="example-full-width col-md-3 mat-form-field ng-tns-c11-16 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid"&gt;<br/>
+         &lt;div class="mat-form-field-wrapper"&gt;<br/>
+          &lt;div class="mat-form-field-flex"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-infix"&gt;<br/>
+            &lt;input _ngcontent-nct-c9="" solonumeros="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" formcontrolname="valorMinutoLeIncluido" matinput="" maxlength="9" placeholder="Valor Minuto Le Incluido" type="number" id="mat-input-6" aria-invalid="false" aria-required="false"&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;label class="mat-form-field-label ng-tns-c11-16 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-13" for="mat-input-6" aria-owns="mat-input-6"&gt;&lt;!----&gt;&lt;!----&gt;Valor Minuto Le Incluido&lt;!----&gt;&lt;!----&gt;&lt;/label&gt;&lt;/span&gt;<br/>
+           &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-underline ng-tns-c11-16 ng-star-inserted"&gt;<br/>
+           &lt;span class="mat-form-field-ripple"&gt;&lt;/span&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-16 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+            &lt;!----&gt;<br/>
+            &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-form-field&gt;&lt;mat-form-field _ngcontent-nct-c9="" class="example-full-width col-md-3 mat-form-field ng-tns-c11-17 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid"&gt;<br/>
+         &lt;div class="mat-form-field-wrapper"&gt;<br/>
+          &lt;div class="mat-form-field-flex"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-infix"&gt;<br/>
+            &lt;input _ngcontent-nct-c9="" solonumeros="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" formcontrolname="valorMinutoLdnAdicional" matinput="" maxlength="9" placeholder="Valor Minuto Ldn Adicional" type="number" id="mat-input-7" aria-invalid="false" aria-required="false"&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;label class="mat-form-field-label ng-tns-c11-17 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-15" for="mat-input-7" aria-owns="mat-input-7"&gt;&lt;!----&gt;&lt;!----&gt;Valor Minuto Ldn Adicional&lt;!----&gt;&lt;!----&gt;&lt;/label&gt;&lt;/span&gt;<br/>
+           &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-underline ng-tns-c11-17 ng-star-inserted"&gt;<br/>
+           &lt;span class="mat-form-field-ripple"&gt;&lt;/span&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-17 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+            &lt;!----&gt;<br/>
+            &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-form-field&gt;&lt;mat-form-field _ngcontent-nct-c9="" class="example-full-width col-md-3 mat-form-field ng-tns-c11-18 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid"&gt;<br/>
+         &lt;div class="mat-form-field-wrapper"&gt;<br/>
+          &lt;div class="mat-form-field-flex"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-infix"&gt;<br/>
+            &lt;input _ngcontent-nct-c9="" solonumeros="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" formcontrolname="valorMinutoLdiAdicional" matinput="" maxlength="9" placeholder="Valor Minuto Ldi Adicional" type="number" id="mat-input-8" aria-invalid="false" aria-required="false"&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;label class="mat-form-field-label ng-tns-c11-18 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-17" for="mat-input-8" aria-owns="mat-input-8"&gt;&lt;!----&gt;&lt;!----&gt;Valor Minuto Ldi Adicional&lt;!----&gt;&lt;!----&gt;&lt;/label&gt;&lt;/span&gt;<br/>
+           &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-underline ng-tns-c11-18 ng-star-inserted"&gt;<br/>
+           &lt;span class="mat-form-field-ripple"&gt;&lt;/span&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-18 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+            &lt;!----&gt;<br/>
+            &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-form-field&gt;&lt;mat-form-field _ngcontent-nct-c9="" class="example-full-width col-md-3 mat-form-field ng-tns-c11-19 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid"&gt;<br/>
+         &lt;div class="mat-form-field-wrapper"&gt;<br/>
+          &lt;div class="mat-form-field-flex"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-infix"&gt;<br/>
+            &lt;input _ngcontent-nct-c9="" solonumeros="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" formcontrolname="valorMinutoLeAdicional" matinput="" maxlength="9" placeholder="Valor Minuto Le Adicional" type="number" id="mat-input-9" aria-invalid="false" aria-required="false"&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;label class="mat-form-field-label ng-tns-c11-19 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-19" for="mat-input-9" aria-owns="mat-input-9"&gt;&lt;!----&gt;&lt;!----&gt;Valor Minuto Le Adicional&lt;!----&gt;&lt;!----&gt;&lt;/label&gt;&lt;/span&gt;<br/>
+           &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-underline ng-tns-c11-19 ng-star-inserted"&gt;<br/>
+           &lt;span class="mat-form-field-ripple"&gt;&lt;/span&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-19 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+            &lt;!----&gt;<br/>
+            &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-form-field&gt;&lt;mat-form-field _ngcontent-nct-c9="" class="example-full-width col-md-3 mat-form-field ng-tns-c11-20 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-should-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid"&gt;<br/>
+         &lt;div class="mat-form-field-wrapper"&gt;<br/>
+          &lt;div class="mat-form-field-flex"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-infix"&gt;<br/>
+            &lt;input _ngcontent-nct-c9="" solofecha="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" formcontrolname="fechaInicial" matinput="" placeholder="Fecha Inicio" aria-haspopup="true" id="mat-input-10" aria-invalid="false" aria-required="false"&gt;&lt;mat-datepicker _ngcontent-nct-c9=""&gt;&lt;/mat-datepicker&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;label class="mat-form-field-label ng-tns-c11-20 ng-star-inserted" id="mat-form-field-label-21" for="mat-input-10" aria-owns="mat-input-10"&gt;&lt;!----&gt;&lt;!----&gt;Fecha Inicio&lt;!----&gt;&lt;!----&gt;&lt;/label&gt;&lt;/span&gt;<br/>
+           &lt;/div&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-suffix ng-tns-c11-20 ng-star-inserted"&gt;<br/>
+            &lt;mat-datepicker-toggle _ngcontent-nct-c9="" class="mat-datepicker-toggle" matsuffix="" tabindex="-1"&gt;<br/>
+             &lt;button aria-haspopup="true" mat-icon-button="" type="button" class="mat-icon-button" aria-label="Open calendar" tabindex="0"&gt;&lt;span class="mat-button-wrapper"&gt;&lt;!----&gt;<br/>
+               &lt;svg class="mat-datepicker-toggle-default-icon ng-star-inserted" fill="currentColor" focusable="false" height="24px" viewbox="0 0 24 24" width="24px"&gt;<br/>
+                &lt;path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"&gt;&lt;/path&gt;<br/>
+               &lt;/svg&gt;&lt;/span&gt;<br/>
+              &lt;div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""&gt;&lt;/div&gt;<br/>
+              &lt;div class="mat-button-focus-overlay"&gt;&lt;/div&gt;&lt;/button&gt;<br/>
+            &lt;/mat-datepicker-toggle&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-underline ng-tns-c11-20 ng-star-inserted"&gt;<br/>
+           &lt;span class="mat-form-field-ripple"&gt;&lt;/span&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-20 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+            &lt;!----&gt;<br/>
+            &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-form-field&gt;&lt;mat-form-field _ngcontent-nct-c9="" class="example-full-width col-md-3 mat-form-field ng-tns-c11-21 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-should-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid"&gt;<br/>
+         &lt;div class="mat-form-field-wrapper"&gt;<br/>
+          &lt;div class="mat-form-field-flex"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-infix"&gt;<br/>
+            &lt;input _ngcontent-nct-c9="" solofecha="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" formcontrolname="fechaFinal" matinput="" placeholder="Fecha Final" aria-haspopup="true" id="mat-input-11" aria-invalid="false" aria-required="false"&gt;&lt;mat-datepicker _ngcontent-nct-c9=""&gt;&lt;/mat-datepicker&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;label class="mat-form-field-label ng-tns-c11-21 ng-star-inserted" id="mat-form-field-label-23" for="mat-input-11" aria-owns="mat-input-11"&gt;&lt;!----&gt;&lt;!----&gt;Fecha Final&lt;!----&gt;&lt;!----&gt;&lt;/label&gt;&lt;/span&gt;<br/>
+           &lt;/div&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-suffix ng-tns-c11-21 ng-star-inserted"&gt;<br/>
+            &lt;mat-datepicker-toggle _ngcontent-nct-c9="" class="mat-datepicker-toggle" matsuffix="" tabindex="-1"&gt;<br/>
+             &lt;button aria-haspopup="true" mat-icon-button="" type="button" class="mat-icon-button" aria-label="Open calendar" tabindex="0"&gt;&lt;span class="mat-button-wrapper"&gt;&lt;!----&gt;<br/>
+               &lt;svg class="mat-datepicker-toggle-default-icon ng-star-inserted" fill="currentColor" focusable="false" height="24px" viewbox="0 0 24 24" width="24px"&gt;<br/>
+                &lt;path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"&gt;&lt;/path&gt;<br/>
+               &lt;/svg&gt;&lt;/span&gt;<br/>
+              &lt;div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""&gt;&lt;/div&gt;<br/>
+              &lt;div class="mat-button-focus-overlay"&gt;&lt;/div&gt;&lt;/button&gt;<br/>
+            &lt;/mat-datepicker-toggle&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-underline ng-tns-c11-21 ng-star-inserted"&gt;<br/>
+           &lt;span class="mat-form-field-ripple"&gt;&lt;/span&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-21 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+            &lt;!----&gt;<br/>
+            &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-form-field&gt;&lt;mat-form-field _ngcontent-nct-c9="" class="example-full-width col-md-3 mat-form-field ng-tns-c11-22 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid"&gt;<br/>
+         &lt;div class="mat-form-field-wrapper"&gt;<br/>
+          &lt;div class="mat-form-field-flex"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-infix"&gt;<br/>
+            &lt;input _ngcontent-nct-c9="" mayusculas="" textonumero="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" formcontrolname="codPlanHomologo" matinput="" maxlength="10" placeholder="Plan Homólogo Altamira" type="text" id="mat-input-12" aria-invalid="false" aria-required="false"&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;label class="mat-form-field-label ng-tns-c11-22 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-25" for="mat-input-12" aria-owns="mat-input-12"&gt;&lt;!----&gt;&lt;!----&gt;Plan Homólogo Altamira&lt;!----&gt;&lt;!----&gt;&lt;/label&gt;&lt;/span&gt;<br/>
+           &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-underline ng-tns-c11-22 ng-star-inserted"&gt;<br/>
+           &lt;span class="mat-form-field-ripple"&gt;&lt;/span&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-22 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+            &lt;!----&gt;<br/>
+            &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-form-field&gt;&lt;mat-form-field _ngcontent-nct-c9="" class="example-full-width col-md-3 mat-form-field ng-tns-c11-23 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid"&gt;<br/>
+         &lt;div class="mat-form-field-wrapper"&gt;<br/>
+          &lt;div class="mat-form-field-flex"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-infix"&gt;<br/>
+            &lt;input _ngcontent-nct-c9="" mayusculas="" textonumero="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" formcontrolname="codBonoAltamira" matinput="" maxlength="10" placeholder="Bono Altamira" type="text" id="mat-input-13" aria-invalid="false" aria-required="false"&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;label class="mat-form-field-label ng-tns-c11-23 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-27" for="mat-input-13" aria-owns="mat-input-13"&gt;&lt;!----&gt;&lt;!----&gt;Bono Altamira&lt;!----&gt;&lt;!----&gt;&lt;/label&gt;&lt;/span&gt;<br/>
+           &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-underline ng-tns-c11-23 ng-star-inserted"&gt;<br/>
+           &lt;span class="mat-form-field-ripple"&gt;&lt;/span&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+           &lt;!----&gt;&lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-23 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+            &lt;!----&gt;<br/>
+            &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-form-field&gt;<br/>
+       &lt;/div&gt;&lt;!----&gt;<br/>
+      &lt;/form&gt;<br/>
+      &lt;div _ngcontent-nct-c9="" class="tabla" hidden&gt;<br/>
+       &lt;mat-form-field _ngcontent-nct-c9="" appearance="outline" class="tabla-filtro mat-form-field ng-tns-c11-24 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder"&gt;<br/>
+        &lt;div class="mat-form-field-wrapper"&gt;<br/>
+         &lt;div class="mat-form-field-flex"&gt;<br/>
+          &lt;!----&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-outline ng-tns-c11-24 ng-star-inserted"&gt;<br/>
+           &lt;div class="mat-form-field-outline-start"&gt;&lt;/div&gt;<br/>
+           &lt;div class="mat-form-field-outline-gap"&gt;&lt;/div&gt;<br/>
+           &lt;div class="mat-form-field-outline-end"&gt;&lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="mat-form-field-outline mat-form-field-outline-thick ng-tns-c11-24 ng-star-inserted"&gt;<br/>
+           &lt;div class="mat-form-field-outline-start"&gt;&lt;/div&gt;<br/>
+           &lt;div class="mat-form-field-outline-gap"&gt;&lt;/div&gt;<br/>
+           &lt;div class="mat-form-field-outline-end"&gt;&lt;/div&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-infix"&gt;<br/>
+           &lt;input _ngcontent-nct-c9="" class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored" matinput="" placeholder="Indique el ID o la descripcion del plan por el cual quiere filtrar la información" id="mat-input-14" aria-invalid="false" aria-required="false"&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;label class="mat-form-field-label ng-tns-c11-24 mat-empty mat-form-field-empty ng-star-inserted" id="mat-form-field-label-29" for="mat-input-14" aria-owns="mat-input-14"&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+             &lt;mat-label _ngcontent-nct-c9="" class="ng-star-inserted"&gt;<br/>
+              Filtrar información<br/>
+             &lt;/mat-label&gt;&lt;!----&gt;&lt;!----&gt;&lt;/label&gt;&lt;/span&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-suffix ng-tns-c11-24 ng-star-inserted"&gt;<br/>
+           &lt;mat-icon _ngcontent-nct-c9="" class="mat-icon notranslate material-icons mat-icon-no-color" matsuffix="" role="img" aria-hidden="true"&gt;<br/>
+            search<br/>
+           &lt;/mat-icon&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;&lt;!----&gt;<br/>
+         &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+          &lt;!----&gt;&lt;!----&gt;<br/>
+          &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-24 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+           &lt;!----&gt;<br/>
+           &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/mat-form-field&gt;<br/>
+       &lt;div _ngcontent-nct-c9="" class="table-container tabla-informacion"&gt;<br/>
+        &lt;table _ngcontent-nct-c9="" class="mat-table" mat-table="" matsort="" role="grid"&gt;<br/>
+         &lt;thead role="rowgroup"&gt;<br/>
+          &lt;!----&gt;<br/>
+          &lt;tr _ngcontent-nct-c9="" class="mat-header-row ng-star-inserted" mat-header-row="" role="row"&gt;<br/>
+           &lt;!----&gt;<br/>
+           &lt;th _ngcontent-nct-c9="" class="mat-header-cell ng-tns-c16-29 cdk-column-id mat-column-id mat-table-sticky ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); top: 0px; z-index: 101; left: 0px; position: sticky;"&gt;<br/>
+            &lt;div class="mat-sort-header-container"&gt;<br/>
+             &lt;button class="mat-sort-header-button" type="button" aria-label="Change sorting for id"&gt;ID&lt;/button&gt;&lt;!----&gt;<br/>
+             &lt;div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c16-29 ng-star-inserted" style="transform: translateY(25%); opacity: 0;"&gt;<br/>
+              &lt;div class="mat-sort-header-stem"&gt;&lt;/div&gt;<br/>
+              &lt;div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);"&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-middle"&gt;&lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;&lt;/th&gt;<br/>
+           &lt;th _ngcontent-nct-c9="" class="mat-header-cell ng-tns-c16-30 cdk-column-codPlan mat-column-codPlan mat-table-sticky ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); top: 0px; position: sticky; z-index: 100;"&gt;<br/>
+            &lt;div class="mat-sort-header-container"&gt;<br/>
+             &lt;button class="mat-sort-header-button" type="button" aria-label="Change sorting for codPlan"&gt; Codigo Plan &lt;/button&gt;&lt;!----&gt;<br/>
+             &lt;div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c16-30 ng-star-inserted" style="transform: translateY(25%); opacity: 0;"&gt;<br/>
+              &lt;div class="mat-sort-header-stem"&gt;&lt;/div&gt;<br/>
+              &lt;div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);"&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-middle"&gt;&lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;&lt;/th&gt;<br/>
+           &lt;th _ngcontent-nct-c9="" class="mat-header-cell ng-tns-c16-31 cdk-column-descripcion mat-column-descripcion mat-table-sticky ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); top: 0px; position: sticky; z-index: 100;"&gt;<br/>
+            &lt;div class="mat-sort-header-container"&gt;<br/>
+             &lt;button class="mat-sort-header-button" type="button" aria-label="Change sorting for descripcion"&gt; Descripcion &lt;/button&gt;&lt;!----&gt;<br/>
+             &lt;div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c16-31 ng-star-inserted" style="transform: translateY(25%); opacity: 0;"&gt;<br/>
+              &lt;div class="mat-sort-header-stem"&gt;&lt;/div&gt;<br/>
+              &lt;div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);"&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-middle"&gt;&lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;&lt;/th&gt;<br/>
+           &lt;th _ngcontent-nct-c9="" class="mat-header-cell ng-tns-c16-32 cdk-column-tipoPlan mat-column-tipoPlan mat-table-sticky ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); top: 0px; position: sticky; z-index: 100;"&gt;<br/>
+            &lt;div class="mat-sort-header-container"&gt;<br/>
+             &lt;button class="mat-sort-header-button" type="button" aria-label="Change sorting for tipoPlan"&gt; Tipo Plan &lt;/button&gt;&lt;!----&gt;<br/>
+             &lt;div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c16-32 ng-star-inserted" style="transform: translateY(25%); opacity: 0;"&gt;<br/>
+              &lt;div class="mat-sort-header-stem"&gt;&lt;/div&gt;<br/>
+              &lt;div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);"&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-middle"&gt;&lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;&lt;/th&gt;<br/>
+           &lt;th _ngcontent-nct-c9="" class="mat-header-cell ng-tns-c16-33 cdk-column-unidadesIncl mat-column-unidadesIncl mat-table-sticky ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); top: 0px; position: sticky; z-index: 100;"&gt;<br/>
+            &lt;div class="mat-sort-header-container"&gt;<br/>
+             &lt;button class="mat-sort-header-button" type="button" aria-label="Change sorting for unidadesIncl"&gt; Unidades Incluidas &lt;/button&gt;&lt;!----&gt;<br/>
+             &lt;div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c16-33 ng-star-inserted" style="transform: translateY(25%); opacity: 0;"&gt;<br/>
+              &lt;div class="mat-sort-header-stem"&gt;&lt;/div&gt;<br/>
+              &lt;div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);"&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-middle"&gt;&lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;&lt;/th&gt;<br/>
+           &lt;th _ngcontent-nct-c9="" class="mat-header-cell ng-tns-c16-34 cdk-column-cargoFijo mat-column-cargoFijo mat-table-sticky ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); top: 0px; position: sticky; z-index: 100;"&gt;<br/>
+            &lt;div class="mat-sort-header-container"&gt;<br/>
+             &lt;button class="mat-sort-header-button" type="button" aria-label="Change sorting for cargoFijo"&gt; Cargo Fijo &lt;/button&gt;&lt;!----&gt;<br/>
+             &lt;div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c16-34 ng-star-inserted" style="transform: translateY(25%); opacity: 0;"&gt;<br/>
+              &lt;div class="mat-sort-header-stem"&gt;&lt;/div&gt;<br/>
+              &lt;div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);"&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-middle"&gt;&lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;&lt;/th&gt;<br/>
+           &lt;th _ngcontent-nct-c9="" class="mat-header-cell ng-tns-c16-35 cdk-column-valorMinutoLdnIncluido mat-column-valorMinutoLdnIncluido mat-table-sticky ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); top: 0px; position: sticky; z-index: 100;"&gt;<br/>
+            &lt;div class="mat-sort-header-container"&gt;<br/>
+             &lt;button class="mat-sort-header-button" type="button" aria-label="Change sorting for valorMinutoLdnIncluido"&gt; Ldn Incluido &lt;/button&gt;&lt;!----&gt;<br/>
+             &lt;div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c16-35 ng-star-inserted" style="transform: translateY(25%); opacity: 0;"&gt;<br/>
+              &lt;div class="mat-sort-header-stem"&gt;&lt;/div&gt;<br/>
+              &lt;div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);"&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-middle"&gt;&lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;&lt;/th&gt;<br/>
+           &lt;th _ngcontent-nct-c9="" class="mat-header-cell ng-tns-c16-36 cdk-column-valorMinutoLdiIncluido mat-column-valorMinutoLdiIncluido mat-table-sticky ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); top: 0px; position: sticky; z-index: 100;"&gt;<br/>
+            &lt;div class="mat-sort-header-container"&gt;<br/>
+             &lt;button class="mat-sort-header-button" type="button" aria-label="Change sorting for valorMinutoLdiIncluido"&gt; Ldi Incluido &lt;/button&gt;&lt;!----&gt;<br/>
+             &lt;div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c16-36 ng-star-inserted" style="transform: translateY(25%); opacity: 0;"&gt;<br/>
+              &lt;div class="mat-sort-header-stem"&gt;&lt;/div&gt;<br/>
+              &lt;div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);"&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-middle"&gt;&lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;&lt;/th&gt;<br/>
+           &lt;th _ngcontent-nct-c9="" class="mat-header-cell ng-tns-c16-37 cdk-column-valorMinutoLeIncluido mat-column-valorMinutoLeIncluido mat-table-sticky ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); top: 0px; position: sticky; z-index: 100;"&gt;<br/>
+            &lt;div class="mat-sort-header-container"&gt;<br/>
+             &lt;button class="mat-sort-header-button" type="button" aria-label="Change sorting for valorMinutoLeIncluido"&gt; Le Incluido &lt;/button&gt;&lt;!----&gt;<br/>
+             &lt;div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c16-37 ng-star-inserted" style="transform: translateY(25%); opacity: 0;"&gt;<br/>
+              &lt;div class="mat-sort-header-stem"&gt;&lt;/div&gt;<br/>
+              &lt;div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);"&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-middle"&gt;&lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;&lt;/th&gt;<br/>
+           &lt;th _ngcontent-nct-c9="" class="mat-header-cell ng-tns-c16-38 cdk-column-valorMinutoLdnAdicional mat-column-valorMinutoLdnAdicional mat-table-sticky ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); top: 0px; position: sticky; z-index: 100;"&gt;<br/>
+            &lt;div class="mat-sort-header-container"&gt;<br/>
+             &lt;button class="mat-sort-header-button" type="button" aria-label="Change sorting for valorMinutoLdnAdicional"&gt; Ldn Adicional &lt;/button&gt;&lt;!----&gt;<br/>
+             &lt;div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c16-38 ng-star-inserted" style="transform: translateY(25%); opacity: 0;"&gt;<br/>
+              &lt;div class="mat-sort-header-stem"&gt;&lt;/div&gt;<br/>
+              &lt;div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);"&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-middle"&gt;&lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;&lt;/th&gt;<br/>
+           &lt;th _ngcontent-nct-c9="" class="mat-header-cell ng-tns-c16-39 cdk-column-valorMinutoLdiAdicional mat-column-valorMinutoLdiAdicional mat-table-sticky ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); top: 0px; position: sticky; z-index: 100;"&gt;<br/>
+            &lt;div class="mat-sort-header-container"&gt;<br/>
+             &lt;button class="mat-sort-header-button" type="button" aria-label="Change sorting for valorMinutoLdiAdicional"&gt; Ldi Adicional &lt;/button&gt;&lt;!----&gt;<br/>
+             &lt;div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c16-39 ng-star-inserted" style="transform: translateY(25%); opacity: 0;"&gt;<br/>
+              &lt;div class="mat-sort-header-stem"&gt;&lt;/div&gt;<br/>
+              &lt;div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);"&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-middle"&gt;&lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;&lt;/th&gt;<br/>
+           &lt;th _ngcontent-nct-c9="" class="mat-header-cell ng-tns-c16-40 cdk-column-valorMinutoLeAdicional mat-column-valorMinutoLeAdicional mat-table-sticky ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); top: 0px; position: sticky; z-index: 100;"&gt;<br/>
+            &lt;div class="mat-sort-header-container"&gt;<br/>
+             &lt;button class="mat-sort-header-button" type="button" aria-label="Change sorting for valorMinutoLeAdicional"&gt; Le Adicional &lt;/button&gt;&lt;!----&gt;<br/>
+             &lt;div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c16-40 ng-star-inserted" style="transform: translateY(25%); opacity: 0;"&gt;<br/>
+              &lt;div class="mat-sort-header-stem"&gt;&lt;/div&gt;<br/>
+              &lt;div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);"&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-middle"&gt;&lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;&lt;/th&gt;<br/>
+           &lt;th _ngcontent-nct-c9="" class="mat-header-cell ng-tns-c16-41 cdk-column-codPlanHomologo mat-column-codPlanHomologo mat-table-sticky ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); top: 0px; position: sticky; z-index: 100;"&gt;<br/>
+            &lt;div class="mat-sort-header-container"&gt;<br/>
+             &lt;button class="mat-sort-header-button" type="button" aria-label="Change sorting for codPlanHomologo"&gt; Plan Homologo &lt;/button&gt;&lt;!----&gt;<br/>
+             &lt;div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c16-41 ng-star-inserted" style="transform: translateY(25%); opacity: 0;"&gt;<br/>
+              &lt;div class="mat-sort-header-stem"&gt;&lt;/div&gt;<br/>
+              &lt;div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);"&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-middle"&gt;&lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;&lt;/th&gt;<br/>
+           &lt;th _ngcontent-nct-c9="" class="mat-header-cell ng-tns-c16-42 cdk-column-codBonoAltamira mat-column-codBonoAltamira mat-table-sticky ng-star-inserted" mat-header-cell="" mat-sort-header="" role="columnheader" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); top: 0px; position: sticky; z-index: 100;"&gt;<br/>
+            &lt;div class="mat-sort-header-container"&gt;<br/>
+             &lt;button class="mat-sort-header-button" type="button" aria-label="Change sorting for codBonoAltamira"&gt; Bono Altamira &lt;/button&gt;&lt;!----&gt;<br/>
+             &lt;div class="mat-sort-header-arrow ng-trigger ng-trigger-arrowPosition ng-tns-c16-42 ng-star-inserted" style="transform: translateY(25%); opacity: 0;"&gt;<br/>
+              &lt;div class="mat-sort-header-stem"&gt;&lt;/div&gt;<br/>
+              &lt;div class="mat-sort-header-indicator ng-trigger ng-trigger-indicator" style="transform: translateY(0px);"&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-left ng-trigger ng-trigger-leftPointer" style="transform: rotate(-45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-right ng-trigger ng-trigger-rightPointer" style="transform: rotate(45deg);"&gt;&lt;/div&gt;<br/>
+               &lt;div class="mat-sort-header-pointer-middle"&gt;&lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;&lt;/th&gt;<br/>
+          &lt;/tr&gt;<br/>
+         &lt;/thead&gt;<br/>
+         &lt;tbody role="rowgroup"&gt;<br/>
+          &lt;!----&gt;<br/>
+         &lt;/tbody&gt;<br/>
+         &lt;tfoot role="rowgroup" class="mat-table-sticky" style="display: none; bottom: 0px; position: sticky; z-index: 10;"&gt;<br/>
+          &lt;!----&gt;<br/>
+         &lt;/tfoot&gt;<br/>
+        &lt;/table&gt;&lt;mat-paginator _ngcontent-nct-c9="" class="mat-paginator" showfirstlastbuttons=""&gt;<br/>
+         &lt;div class="mat-paginator-outer-container"&gt;<br/>
+          &lt;div class="mat-paginator-container"&gt;<br/>
+           &lt;!----&gt;<br/>
+           &lt;div class="mat-paginator-page-size ng-star-inserted"&gt;<br/>
+            &lt;div class="mat-paginator-page-size-label"&gt;<br/>
+             Items per page:<br/>
+            &lt;/div&gt;&lt;!----&gt;&lt;mat-form-field class="mat-paginator-page-size-select mat-form-field ng-tns-c11-43 mat-primary mat-form-field-type-mat-select mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-hide-placeholder ng-star-inserted mat-form-field-should-float"&gt;<br/>
+             &lt;div class="mat-form-field-wrapper"&gt;<br/>
+              &lt;div class="mat-form-field-flex"&gt;<br/>
+               &lt;!----&gt;&lt;!----&gt;<br/>
+               &lt;div class="mat-form-field-infix"&gt;<br/>
+                &lt;mat-select class="mat-select ng-tns-c18-44 ng-star-inserted" role="listbox" id="mat-select-1" tabindex="0" aria-label="Items per page:" aria-required="false" aria-disabled="false" aria-invalid="false" aria-multiselectable="false"&gt;<br/>
+                 &lt;div class="mat-select-trigger" aria-hidden="true" cdk-overlay-origin=""&gt;<br/>
+                  &lt;div class="mat-select-value"&gt;<br/>
+                   &lt;!----&gt;&lt;!----&gt;&lt;span class="mat-select-value-text ng-tns-c18-44 ng-star-inserted"&gt;&lt;!----&gt;&lt;span class="ng-tns-c18-44 ng-star-inserted"&gt;5&lt;/span&gt;&lt;!----&gt;&lt;/span&gt;<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="mat-select-arrow-wrapper"&gt;<br/>
+                   &lt;div class="mat-select-arrow"&gt;&lt;/div&gt;<br/>
+                  &lt;/div&gt;<br/>
+                 &lt;/div&gt;&lt;!----&gt;<br/>
+                &lt;/mat-select&gt;&lt;span class="mat-form-field-label-wrapper"&gt;&lt;!----&gt;&lt;/span&gt;<br/>
+               &lt;/div&gt;&lt;!----&gt;<br/>
+              &lt;/div&gt;&lt;!----&gt;<br/>
+              &lt;div class="mat-form-field-underline ng-tns-c11-43 ng-star-inserted"&gt;<br/>
+               &lt;span class="mat-form-field-ripple"&gt;&lt;/span&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="mat-form-field-subscript-wrapper"&gt;<br/>
+               &lt;!----&gt;&lt;!----&gt;<br/>
+               &lt;div class="mat-form-field-hint-wrapper ng-tns-c11-43 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);"&gt;<br/>
+                &lt;!----&gt;<br/>
+                &lt;div class="mat-form-field-hint-spacer"&gt;&lt;/div&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/mat-form-field&gt;&lt;!----&gt;<br/>
+           &lt;/div&gt;<br/>
+           &lt;div class="mat-paginator-range-actions"&gt;<br/>
+            &lt;div class="mat-paginator-range-label"&gt;<br/>
+             0 of 0<br/>
+            &lt;/div&gt;&lt;!----&gt;&lt;button class="mat-paginator-navigation-first mat-icon-button ng-star-inserted" mat-icon-button="" type="button" aria-describedby="cdk-describedby-message-3" cdk-describedby-host="" aria-label="First page" disabled style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"&gt;&lt;span class="mat-button-wrapper"&gt;<br/>
+              &lt;svg class="mat-paginator-icon" focusable="false" viewbox="0 0 24 24"&gt;<br/>
+               &lt;path d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z"&gt;&lt;/path&gt;<br/>
+              &lt;/svg&gt;&lt;/span&gt;<br/>
+             &lt;div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""&gt;&lt;/div&gt;<br/>
+             &lt;div class="mat-button-focus-overlay"&gt;&lt;/div&gt;&lt;/button&gt;&lt;!----&gt;&lt;button class="mat-paginator-navigation-previous mat-icon-button" mat-icon-button="" type="button" aria-describedby="cdk-describedby-message-1" cdk-describedby-host="" aria-label="Previous page" disabled style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"&gt;&lt;span class="mat-button-wrapper"&gt;<br/>
+              &lt;svg class="mat-paginator-icon" focusable="false" viewbox="0 0 24 24"&gt;<br/>
+               &lt;path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"&gt;&lt;/path&gt;<br/>
+              &lt;/svg&gt;&lt;/span&gt;<br/>
+             &lt;div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""&gt;&lt;/div&gt;<br/>
+             &lt;div class="mat-button-focus-overlay"&gt;&lt;/div&gt;&lt;/button&gt;&lt;button class="mat-paginator-navigation-next mat-icon-button" mat-icon-button="" type="button" aria-describedby="cdk-describedby-message-2" cdk-describedby-host="" aria-label="Next page" disabled style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"&gt;&lt;span class="mat-button-wrapper"&gt;<br/>
+              &lt;svg class="mat-paginator-icon" focusable="false" viewbox="0 0 24 24"&gt;<br/>
+               &lt;path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"&gt;&lt;/path&gt;<br/>
+              &lt;/svg&gt;&lt;/span&gt;<br/>
+             &lt;div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""&gt;&lt;/div&gt;<br/>
+             &lt;div class="mat-button-focus-overlay"&gt;&lt;/div&gt;&lt;/button&gt;&lt;!----&gt;&lt;button class="mat-paginator-navigation-last mat-icon-button ng-star-inserted" mat-icon-button="" type="button" aria-describedby="cdk-describedby-message-4" cdk-describedby-host="" aria-label="Last page" disabled style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"&gt;&lt;span class="mat-button-wrapper"&gt;<br/>
+              &lt;svg class="mat-paginator-icon" focusable="false" viewbox="0 0 24 24"&gt;<br/>
+               &lt;path d="M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6zM16 6h2v12h-2z"&gt;&lt;/path&gt;<br/>
+              &lt;/svg&gt;&lt;/span&gt;<br/>
+             &lt;div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""&gt;&lt;/div&gt;<br/>
+             &lt;div class="mat-button-focus-overlay"&gt;&lt;/div&gt;&lt;/button&gt;&lt;!----&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mat-paginator&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;<br/>
+    &lt;/app-planes&gt;<br/>
+   &lt;/div&gt;<br/>
+  &lt;/app-root&gt; <br/>
+  &lt;script src="runtime-es2015.da09234143a83b9c249f.js" type="module"&gt;&lt;/script&gt;<br/>
+  &lt;script src="runtime-es5.da09234143a83b9c249f.js" nomodule="" defer&gt;&lt;/script&gt;<br/>
+  &lt;script src="polyfills-es5.09182e80f768255b872d.js" nomodule="" defer&gt;&lt;/script&gt;<br/>
+  &lt;script src="polyfills-es2015.57ac43c1b97ffb825193.js" type="module"&gt;&lt;/script&gt;<br/>
+  &lt;script src="main-es2015.fb7427b77bb38b1f297f.js" type="module"&gt;&lt;/script&gt;<br/>
+  &lt;script src="main-es5.fb7427b77bb38b1f297f.js" nomodule="" defer&gt;&lt;/script&gt; <br/>
+  &lt;div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite"&gt;&lt;/div&gt;<br/>
+  &lt;div id="cdk-describedby-message-container" aria-hidden="true" style="display: none;"&gt;<br/>
+   &lt;div id="cdk-describedby-message-0"&gt;<br/>
+    Click para ver estado de los procesos<br/>
+   &lt;/div&gt;<br/>
+   &lt;div id="cdk-describedby-message-1"&gt;<br/>
+    Previous page<br/>
+   &lt;/div&gt;<br/>
+   &lt;div id="cdk-describedby-message-2"&gt;<br/>
+    Next page<br/>
+   &lt;/div&gt;<br/>
+   &lt;div id="cdk-describedby-message-3"&gt;<br/>
+    First page<br/>
+   &lt;/div&gt;<br/>
+   &lt;div id="cdk-describedby-message-4"&gt;<br/>
+    Last page<br/>
+   &lt;/div&gt;<br/>
+  &lt;/div&gt;<br/>
+  &lt;div class="cdk-overlay-container"&gt;&lt;/div&gt;<br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>
